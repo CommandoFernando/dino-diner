@@ -13,11 +13,14 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> ingredients = new List<string>() { "Bread" };
-                if (peanutButter) ingredients.Add("Peanut Butter");
-                if (jelly) ingredients.Add("Jelly");
+                List<string> ingredients = new List<string>() { "Chicken", "Wing Sauce" };
                 return ingredients;
             }
+        }
+        public PterodactylWings()
+        {
+            this.Price = 7.21;
+            this.Calories = 318;
         }
     }
 }
