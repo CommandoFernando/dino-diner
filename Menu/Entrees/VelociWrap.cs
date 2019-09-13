@@ -4,8 +4,11 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
-    class VelociWrap
+    public class VelociWrap
     {
+        private bool dressing = true;
+        private bool lettuce = true;
+        private bool cheese = true;
         public double Price { get; set; }
         public uint Calories { get; set; }
 
@@ -13,11 +16,29 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> ingredients = new List<string>() { "Bread" };
-                if (peanutButter) ingredients.Add("Peanut Butter");
-                if (jelly) ingredients.Add("Jelly");
+                List<string> ingredients = new List<string>() { "Flour Tortilla" };
+                if (dressing) ingredients.Add("Ceasar Dressing");
+                if (lettuce) ingredients.Add("Romaine Lettuce");
+                if (cheese) ingredients.Add("Parmesan Cheese");
                 return ingredients;
             }
+        }
+        public VelociWrap()
+        {
+            this.Price = 6.86;
+            this.Calories = 356;
+        }
+        public void HoldDressing()
+        {
+            this.dressing = false;
+        }
+        public void HoldLettuce()
+        {
+            this.lettuce = false;
+        }
+        public void HoldCheese()
+        {
+            this.cheese = false;
         }
     }
 }
