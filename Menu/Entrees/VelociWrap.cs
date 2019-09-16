@@ -4,8 +4,14 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// Velociwrap menu item
+    /// </summary>
     public class VelociWrap
     {
+        /// <summary>
+        /// Tells whether the wrap has dressing or not
+        /// </summary>
         private bool dressing = true;
         private bool lettuce = true;
         private bool cheese = true;
