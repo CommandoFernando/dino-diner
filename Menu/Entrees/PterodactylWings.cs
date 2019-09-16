@@ -4,11 +4,22 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// Chicken wing Entree
+    /// </summary>
     public class PterodactylWings
     {
+        /// <summary>
+        /// Getter/Setter for price
+        /// </summary>
         public double Price { get; set; }
+        /// <summary>
+        /// Getter/Setter for Calories
+        /// </summary>
         public uint Calories { get; set; }
-
+        /// <summary>
+        /// List of ingredients for wings
+        /// </summary>
         public List<string> Ingredients
         {
             get
@@ -17,6 +28,10 @@ namespace DinoDiner.Menu.Entrees
                 return ingredients;
             }
         }
+        /// <summary>
+        /// Default constructor initializes
+        /// Price and calories to default values
+        /// </summary>
         public PterodactylWings()
         {
             this.Price = 7.21;

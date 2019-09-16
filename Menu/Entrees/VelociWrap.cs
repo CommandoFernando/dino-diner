@@ -13,11 +13,25 @@ namespace DinoDiner.Menu.Entrees
         /// Tells whether the wrap has dressing or not
         /// </summary>
         private bool dressing = true;
+        /// <summary>
+        /// Tells whether the wrap has lettuce
+        /// </summary>
         private bool lettuce = true;
+        /// <summary>
+        /// Tells whether the wrap has cheese
+        /// </summary>
         private bool cheese = true;
+        /// <summary>
+        /// Price of VelociWrap
+        /// </summary>
         public double Price { get; set; }
+        /// <summary>
+        /// Calories for VelociWrap
+        /// </summary>
         public uint Calories { get; set; }
-
+        /// <summary>
+        /// Ingredient list for VelociWrap
+        /// </summary>
         public List<string> Ingredients
         {
             get
@@ -29,19 +43,32 @@ namespace DinoDiner.Menu.Entrees
                 return ingredients;
             }
         }
+        /// <summary>
+        /// VelociWrap default constructor
+        /// sets price and calories to default values
+        /// </summary>
         public VelociWrap()
         {
             this.Price = 6.86;
             this.Calories = 356;
         }
+        /// <summary>
+        /// Method for removing dressing
+        /// </summary>
         public void HoldDressing()
         {
             this.dressing = false;
         }
+        /// <summary>
+        /// Method for Removing the lettuce
+        /// </summary>
         public void HoldLettuce()
         {
             this.lettuce = false;
         }
+        /// <summary>
+        /// Method for Removing the Cheese
+        /// </summary>
         public void HoldCheese()
         {
             this.cheese = false;
