@@ -20,6 +20,9 @@ namespace DinoDiner.Menu.Sides
                 return new List<string>() { "Potato", "Salt", "Vegtable Oil" };
             }
         }
+        /// <summary>
+        /// Side size
+        /// </summary>
         public override Size Size
         {
             set

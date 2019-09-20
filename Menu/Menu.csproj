@@ -5,13 +5,8 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\fvela\source\repos\dino-diner\Menu\Menu.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\fvelarde\source\repos\dino-dinerM\Menu\Menu.xml</DocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Sides\Mezzorella Sticks.cs" />
-    <Compile Remove="Sides\Triceritots.cs" />
-  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Milestones\" />

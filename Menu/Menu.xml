@@ -316,7 +316,52 @@
             List of ingredients
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Size">
+            <summary>
+            Side size
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Sides.Fryceritops.#ctor">
+            <summary>
+            Constructor set Price and Calories to default values
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.MeteorMacAndCheese">
+            <summary>
+            Side of mack and cheese
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Ingredients">
+            <summary>
+            List of ingredients
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Size">
+            <summary>
+            The size of the side
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.MeteorMacAndCheese.#ctor">
+            <summary>
+            Constructor set Price and Calories to default values
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Mezzorella_Sticks">
+            <summary>
+            Mozzerella stick side
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Mezzorella_Sticks.Ingredients">
+            <summary>
+            List of ingredients
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Mezzorella_Sticks.Size">
+            <summary>
+            side size
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Mezzorella_Sticks.#ctor">
             <summary>
             Constructor set Price and Calories to default values
             </summary>
@@ -364,6 +409,26 @@
         <member name="P:DinoDiner.Menu.Sides.Side.Size">
             <summary>
             Gets or sets the size
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Triceritots">
+             <summary>
+            Tater tot side
+             </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Triceritots.Ingredients">
+            <summary>
+            List of ingredients
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Triceritots.Size">
+            <summary>
+            side size
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Triceritots.#ctor">
+            <summary>
+            Constructor set Price and Calories to default values
             </summary>
         </member>
     </members>
