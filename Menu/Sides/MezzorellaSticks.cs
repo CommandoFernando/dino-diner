@@ -17,7 +17,7 @@ namespace DinoDiner.Menu.Sides
         {
             get
             {
-                return new List<string>() { "cheese product", "breading", "Vegetable Oil" };
+                return new List<string>() { "Cheese Product", "Breading", "Vegetable Oil" };
             }
         }
         /// <summary>
@@ -32,11 +32,11 @@ namespace DinoDiner.Menu.Sides
                 {
                     case Size.Large:
                         Price = 1.95;
-                        Calories = 480;
+                        Calories = 720;
                         break;
                     case Size.Medium:
                         Price = 1.45;
-                        Calories = 540;
+                        Calories = 610;
                         break;
                     case Size.Small:
                         Price = .99;

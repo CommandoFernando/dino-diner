@@ -17,7 +17,7 @@ namespace DinoDiner.Menu.Sides
         {
             get
             {
-                return new List<string>() { "potatoes", "salt", "vegetable oil" };
+                return new List<string>() { "Potato", "Salt", "Vegetable Oil" };
             }
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace DinoDiner.Menu.Sides
         public Triceritots()
         {
             this.Price = 0.99;
-            this.Calories = 540;
+            this.Calories = 352;
         }
     }
 }
