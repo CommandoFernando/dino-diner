@@ -7,35 +7,53 @@ namespace DinoDiner.Menu.Sides
     /// <summary>
     /// Side of Fries
     /// </summary>
-    public class Fryceritops
+    public class Fryceritops : Side
     {
+        private Size size;
         /// <summary>
-        /// Getter/Setter for price
+        /// List of ingredients
         /// </summary>
-        public double Price { get; set; } ///It’s price is **$0.99 (small)**, **$1.45 (medium)**, or **$1.95 (large)**.  Its calories are **222 (small)**, **365 (medium)**, and **480 (large)**.
-        /// <summary>
-        /// Getter/Setter Calories
-        /// </summary>
-        public uint Calories { get; set; }
-        /// <summary>
-        /// Size of side
-        /// </summary>
-        public Size Size { get; set; }
-        /// <summary>
-        /// Ingredient list for Fryceritops
-        /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
-                List<string> ingredients = new List<string>() { "potatoes, salt, vegetable oil"};
-                return ingredients;
+                return new List<string>() { "Potato", "Salt", "Vegtable Oil" };
             }
         }
-        public Fryceritops()
+        public override Size Size
         {
-            this.Price = 
+            set
+            {
+                size = value;
+                switch (size)
+                {
+                    case Size.Large:
+                        Price = 1.95;
+                        Calories = 480;
+                        break;
+                    case Size.Medium:
+                        Price = 1.45;
+                        Calories = 365;
+                        break;
+                    case Size.Small:
+                        Price = .99;
+                        Calories = 222;
+                        break;
+                }
+  
+            }
+            get
+            {
+                return size;
+            }
         }
-
+        /// <summary>
+        /// Constructor set Price and Calories to default values
+        /// </summary>
+       public Fryceritops()
+        {
+            this.Price = 0.99;
+            this.Calories = 222;
+        }
     }
 }

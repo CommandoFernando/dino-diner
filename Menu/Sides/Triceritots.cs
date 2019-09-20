@@ -24,16 +24,5 @@ namespace DinoDiner.Menu.Sides
         /// <summary>
         /// Ingredient list for Triceritots
         /// </summary>
-        public List<string> Ingredients
-        {
-            get
-            {
-                List<string> ingredients = new List<string>() { "Flour Tortilla", "Chicken Breast" };
-                if (dressing) ingredients.Add("Ceasar Dressing");
-                if (lettuce) ingredients.Add("Romaine Lettuce");
-                if (cheese) ingredients.Add("Parmesan Cheese");
-                return ingredients;
-            }
-        }
     }
 }

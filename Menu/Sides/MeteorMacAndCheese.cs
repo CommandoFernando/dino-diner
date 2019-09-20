@@ -7,8 +7,9 @@ namespace DinoDiner.Menu.Sides
     /// <summary>
     /// Side of mack and cheese
     /// </summary>
-    public class MeteorMacAndCheese
+    public class MeteorMacAndCheese : Side
     {
+        private Size size;
         /// <summary>
         /// Getter/Setter for Price
         /// </summary>
@@ -24,15 +25,11 @@ namespace DinoDiner.Menu.Sides
         /// <summary>
         /// Ingredient list for mac and cheese
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
-                List<string> ingredients = new List<string>() { "Flour Tortilla", "Chicken Breast" };
-                if (dressing) ingredients.Add("Ceasar Dressing");
-                if (lettuce) ingredients.Add("Romaine Lettuce");
-                if (cheese) ingredients.Add("Parmesan Cheese");
-                return ingredients;
+                return new List<string>() { "macaroni nooles", "cheese product", "pork sausage" };
             }
         }
     }

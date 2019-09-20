@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Sides\Mezzorella Sticks.cs" />
+    <Compile Remove="Sides\Triceritots.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Milestones\" />
   </ItemGroup>
 
