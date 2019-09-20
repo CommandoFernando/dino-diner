@@ -25,7 +25,7 @@ namespace MenuTest.Sides
             Mezzorella_Sticks ms = new Mezzorella_Sticks();
             Assert.Contains<string>("Breading", ms.Ingredients);
             Assert.Contains<string>("Cheese Product", ms.Ingredients);
-            Assert.Contains<string>("Vegtable Oil", ms.Ingredients);
+            Assert.Contains<string>("Vegetable Oil", ms.Ingredients);
             Assert.Equal<int>(3, ms.Ingredients.Count);
         }
 
@@ -57,7 +57,7 @@ namespace MenuTest.Sides
         {
             Mezzorella_Sticks ms = new Mezzorella_Sticks();
             ms.Size = Size.Medium;
-            Assert.Equal<Size>(Size.Medium, Size.Medium);
+            Assert.Equal<Size>(Size.Medium, ms.Size);
         }
 
         [Fact]
@@ -81,7 +81,7 @@ namespace MenuTest.Sides
         {
             Mezzorella_Sticks ms = new Mezzorella_Sticks();
             ms.Size = Size.Large;
-            Assert.Equal<Size>(Size.Large, Size.Large);
+            Assert.Equal<Size>(Size.Large, ms.Size);
         }
     }
 }
