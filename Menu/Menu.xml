@@ -9,16 +9,6 @@
             Brontowurst Entree
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Price">
-            <summary>
-            Getter/Setter for the price
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Calories">
-            <summary>
-            Getter/Setter for the Calories
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Ingredients">
             <summary>
             list of ingredients for Brontowurst
@@ -50,16 +40,6 @@
             Chicken Nugget Entree
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Price">
-            <summary>
-            Getter/Setter for the price
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Calories">
-            <summary>
-            Getter/Setter for the calories
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Ingredients">
             <summary>
             List of ingredients for the chicken nuggets
@@ -76,19 +56,29 @@
             Method for adding an additional chicken nugget to the entree
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Entrees.Entree">
+            <summary>
+            Entree Class
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Price">
+            <summary>
+            Entree Price
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Calories">
+            <summary>
+            Entree Calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Ingredients">
+            <summary>
+            Entree Ingredients
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
             <summary>
             PBJ entree class
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Price">
-            <summary>
-            Getter/Setter for Price of PBJ
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Calories">
-            <summary>
-            Getter/Setter for Calories of PBJ
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">
@@ -117,16 +107,6 @@
             Chicken wing Entree
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Price">
-            <summary>
-            Getter/Setter for price
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Calories">
-            <summary>
-            Getter/Setter for Calories
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Ingredients">
             <summary>
             List of ingredients for wings
@@ -141,16 +121,6 @@
         <member name="T:DinoDiner.Menu.Entrees.SteakosaurusBurger">
             <summary>
             Steak burger Entree
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Price">
-            <summary>
-            Getter/Setter for price
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Calories">
-            <summary>
-            Getter/Setter for Calories
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Ingredients">
@@ -187,16 +157,6 @@
         <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
             <summary>
             King burger Entree
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Price">
-            <summary>
-            Getter/Setter for Price
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Calories">
-            <summary>
-            Getter/Setter for Calories
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Ingredients">
@@ -268,16 +228,6 @@
         <member name="F:DinoDiner.Menu.Entrees.VelociWrap.cheese">
             <summary>
             Tells whether the wrap has cheese
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Price">
-            <summary>
-            Price of VelociWrap
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Calories">
-            <summary>
-            Calories for VelociWrap
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">

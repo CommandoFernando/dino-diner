@@ -7,21 +7,14 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Chicken Nugget Entree
     /// </summary>
-    public class DinoNuggets
+    public class DinoNuggets : Entree
     {
         private uint nuggetCount { get; set; }
-        /// <summary>
-        /// Getter/Setter for the price
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// Getter/Setter for the calories
-        /// </summary>
-        public uint Calories { get; set; }
+
         /// <summary>
         /// List of ingredients for the chicken nuggets
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {   

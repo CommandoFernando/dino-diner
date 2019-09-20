@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Velociwrap menu item
     /// </summary>
-    public class VelociWrap
+    public class VelociWrap : Entree
     {
         /// <summary>
         /// Tells whether the wrap has dressing or not
@@ -22,17 +22,9 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         private bool cheese = true;
         /// <summary>
-        /// Price of VelociWrap
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// Calories for VelociWrap
-        /// </summary>
-        public uint Calories { get; set; }
-        /// <summary>
         /// Ingredient list for VelociWrap
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
