@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*  VelociWrap.cs
+*   Author: Fernando Velarde
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -43,7 +47,7 @@ namespace DinoDiner.Menu.Sides
                         Calories = 222;
                         break;
                 }
-  
+
             }
             get
             {
@@ -53,7 +57,7 @@ namespace DinoDiner.Menu.Sides
         /// <summary>
         /// Constructor set Price and Calories to default values
         /// </summary>
-       public Fryceritops()
+        public Fryceritops()
         {
             this.Price = 0.99;
             this.Calories = 222;

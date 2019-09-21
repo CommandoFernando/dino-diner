@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*  Side.cs
+*   Author: Fernando Velarde
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -16,7 +20,7 @@ namespace DinoDiner.Menu.Sides
         /// <summary>
         /// Medium sized side
         /// </summary>
-        Medium, 
+        Medium,
         /// <summary>
         /// Large size side
         /// </summary>

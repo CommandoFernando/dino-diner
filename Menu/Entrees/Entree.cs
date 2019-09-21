@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*  Entree.cs
+*   Author: Fernando Velarde
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -20,6 +24,6 @@ namespace DinoDiner.Menu.Entrees
         /// <summary>
         /// Entree Ingredients
         /// </summary>
-        public abstract List<string> Ingredients { get;}
+        public abstract List<string> Ingredients { get; }
     }
 }

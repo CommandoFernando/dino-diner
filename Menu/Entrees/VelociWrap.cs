@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*  VelociWrap.cs
+*   Author: Fernando Velarde
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

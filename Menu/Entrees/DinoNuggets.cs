@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*  DinoNuggets.cs
+*   Author: Fernando Velarde
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -19,12 +23,12 @@ namespace DinoDiner.Menu.Entrees
             get
             {
                 List<string> ingredients = new List<string>();
-                for (int i = 0; i<nuggetCount; i++)
+                for (int i = 0; i < nuggetCount; i++)
                 {
                     ingredients.Add("Chicken Nugget");
                 }
                 return ingredients;
-            }            
+            }
         }
         /// <summary>
         /// Default constructor sets the price, calories,

@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*  BrontoWurst.cs
+*   Author: Fernando Velarde
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -20,7 +24,7 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> ingredients = new List<string>() {"Brautwurst"};
+                List<string> ingredients = new List<string>() { "Brautwurst" };
                 if (bun) ingredients.Add("Whole Wheat Bun");
                 if (peppers) ingredients.Add("Peppers");
                 if (onions) ingredients.Add("Onion");
