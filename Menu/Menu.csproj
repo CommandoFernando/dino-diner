@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\fvelarde\source\repos\dino-dinerM\Menu\Menu.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\fvela\source\repos\dino-diner\Menu\Menu.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

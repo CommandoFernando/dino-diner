@@ -17,15 +17,14 @@ namespace DinoDiner.Menu.Entrees
         public override List<string> Ingredients
         {
             get
-            {   
-                for(int i = 0; i<nuggetCount; i++)
+            {
+                List<string> ingredients = new List<string>();
+                for (int i = 0; i<nuggetCount; i++)
                 {
-                    Ingredients.Add("chicken nuggets");
+                    ingredients.Add("Chicken Nugget");
                 }
-                List<string> ingredients = new List<string>() {};
                 return ingredients;
-            }
-            
+            }            
         }
         /// <summary>
         /// Default constructor sets the price, calories,
@@ -33,18 +32,18 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public DinoNuggets()
         {
-            this.Price = 4.25;
-            this.Calories = 59 * nuggetCount;
             this.nuggetCount = 6;
+            this.Calories = 59 * nuggetCount;
+            this.Price = 4.25;
         }
         /// <summary>
         /// Method for adding an additional chicken nugget to the entree
         /// </summary>
         public void AddNugget()
         {
-            this.nuggetCount = nuggetCount++;
-            this.Calories = Calories + 59;
-            this.Price = Price + .25;
+            nuggetCount++;
+            this.Calories += 59;
+            this.Price += .25;
         }
     }
 }
