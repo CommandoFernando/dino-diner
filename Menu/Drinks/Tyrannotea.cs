@@ -12,6 +12,7 @@ namespace DinoDiner.Menu.Drinks
     /// </summary>
     public class Tyrannotea : Drink
     {
+        private bool Lemon { get; set; } = false;
         private Size size;
         /// <summary>
         /// Constructor sets Price and Calories to default values
@@ -59,6 +60,10 @@ namespace DinoDiner.Menu.Drinks
             {
                 return new List<string>() { "Tea" };
             }
+        }
+        public void AddLemon()
+        {
+            this.Lemon = true;
         }
     }
 }
