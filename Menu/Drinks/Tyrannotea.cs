@@ -61,6 +61,9 @@ namespace DinoDiner.Menu.Drinks
                 return new List<string>() { "Tea" };
             }
         }
+        /// <summary>
+        /// Method for adding lemon to tea
+        /// </summary>
         public void AddLemon()
         {
             this.Lemon = true;
