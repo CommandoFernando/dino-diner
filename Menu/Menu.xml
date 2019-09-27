@@ -4,25 +4,46 @@
         <name>Menu</name>
     </assembly>
     <members>
-        <member name="T:DinoDiner.Menu.Drinks.Size">
+        <member name="T:DinoDiner.Menu.CretaceousCombo">
             <summary>
-            Enum that defines the sizes (small, medium, large)
+            Combo Class
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Size.Small">
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Entree">
             <summary>
-            Small sized side
+            Entree object for combo
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Size.Medium">
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Drink">
             <summary>
-            Medium sized side
+            Drink Object for combo
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Size.Large">
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Side">
             <summary>
-            Large size side
+            Side object for combo
             </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Size">
+            <summary>
+            Size property for Combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Price">
+            <summary>
+            Combo price getter
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Ingredients">
+            <summary>
+            Combo Ingredient list
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.ToString">
+            <summary>
+            Custom to string for combo
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:DinoDiner.Menu.Drinks.SodasaurusFlavor">
             <summary>
@@ -559,26 +580,6 @@
         <member name="M:DinoDiner.Menu.Sides.Mezzorella_Sticks.#ctor">
             <summary>
             Constructor set Price and Calories to default values
-            </summary>
-        </member>
-        <member name="T:DinoDiner.Menu.Sides.Size">
-            <summary>
-            Enum that defines the sizes (small, medium, large)
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Sides.Size.Small">
-            <summary>
-            Small sized side
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Sides.Size.Medium">
-            <summary>
-            Medium sized side
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Sides.Size.Large">
-            <summary>
-            Large size side
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Sides.Side">

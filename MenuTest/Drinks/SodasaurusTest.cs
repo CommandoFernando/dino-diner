@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using DinoDiner.Menu.Drinks;
+using DinoDiner.Menu;
 
 namespace MenuTest.Drinks
 {
@@ -123,8 +124,8 @@ namespace MenuTest.Drinks
         public void ShouldHaveCorrectPriceForMedium()
         {
             Sodasaurus soda = new Sodasaurus();
-            soda.Size = Size.Medium;
             soda.Size = Size.Small;
+            soda.Size = Size.Medium;
             Assert.Equal<double>(2.00, soda.Price);
         }
         /// <summary>
@@ -163,6 +164,8 @@ namespace MenuTest.Drinks
         public void ShouldHaveCorrectCaloriesForMedium()
         {
             Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Large;
+            soda.Size = Size.Medium;
             Assert.Equal<uint>(156, soda.Calories);
         }
         /// <summary>
@@ -172,6 +175,8 @@ namespace MenuTest.Drinks
         public void ShouldHaveCorrectCaloriesForLarge()
         {
             Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Medium;
+            soda.Size = Size.Large;
             Assert.Equal<uint>(208, soda.Calories);
         }
         [Fact]
