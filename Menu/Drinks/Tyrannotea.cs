@@ -12,8 +12,14 @@ namespace DinoDiner.Menu.Drinks
     /// </summary>
     public class Tyrannotea : Drink
     {
-        private bool Sweet { get; set; } = false;
-        private bool Lemon { get; set; } = false;
+        /// <summary>
+        /// Bool tells whether sweet
+        /// </summary>
+        public bool Sweet { get; set; } = false;
+        /// <summary>
+        /// bool tells whether lemon
+        /// </summary>
+        public bool Lemon { get; set; } = false;
         private Size size;
         /// <summary>
         /// Constructor sets Price and Calories to default values

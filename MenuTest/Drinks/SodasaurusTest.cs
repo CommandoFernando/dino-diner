@@ -155,6 +155,8 @@ namespace MenuTest.Drinks
         public void ShouldHaveCorrectCaloriesForSmall()
         {
             Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Large;
+            soda.Size = Size.Small;
             Assert.Equal<uint>(112, soda.Calories);
         }
         /// <summary>
@@ -179,6 +181,9 @@ namespace MenuTest.Drinks
             soda.Size = Size.Large;
             Assert.Equal<uint>(208, soda.Calories);
         }
+        /// <summary>
+        /// Tests hold Ice method
+        /// </summary>
         [Fact]
         public void HoldIceShouldSetIceToFalse()
         {

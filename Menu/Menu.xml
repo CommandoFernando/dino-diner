@@ -45,6 +45,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entrees.Entree)">
+            <summary>
+            Combo constructor Sets Entree to entree and initializes Side and Drink to default Value
+            </summary>
+            <param name="entree"></param>
+        </member>
         <member name="T:DinoDiner.Menu.Drinks.SodasaurusFlavor">
             <summary>
             Enum that defines the soda flavors
@@ -223,6 +229,16 @@
         <member name="T:DinoDiner.Menu.Drinks.Tyrannotea">
             <summary>
             Tea drink class
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Sweet">
+            <summary>
+            Bool tells whether sweet
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Lemon">
+            <summary>
+            bool tells whether lemon
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.#ctor">
