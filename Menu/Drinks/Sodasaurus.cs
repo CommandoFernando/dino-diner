@@ -12,14 +12,29 @@ namespace DinoDiner.Menu.Drinks
     /// </summary>
     public class Sodasaurus : Drink
     {
+        private SodasaurusFlavors flavor = SodasaurusFlavors.Cola;
+        /// <summary>
+        /// Soda flavor
+        /// </summary>
+        public SodasaurusFlavors Flavor {
+            get
+            {
+                return flavor;
+            }
+            set
+            {
+                flavor = value;
+            }
+        }
         private Size size;
         /// <summary>
         /// Constructor, price and calories to default values
         /// </summary>
         public Sodasaurus()
         {
-            this.Price = 0;
-            this.Calories = 0;
+            this.Size = Size.Small;
+            this.Price = 1.50;
+            this.Calories = 112;
         }
         /// <summary>
         /// Size 
@@ -32,17 +47,21 @@ namespace DinoDiner.Menu.Drinks
                 switch (size)
                 {
                     case Size.Large:
-                        Price = 1.95;
-                        Calories = 480;
+                        Price = 2.50;
+                        Calories = 208;
                         break;
                     case Size.Medium:
-                        Price = 1.45;
-                        Calories = 365;
+                        Price = 2.00;
+                        Calories = 156;
                         break;
                     case Size.Small:
-                        Price = .99;
-                        Calories = 222;
+                        Price = 1.50;
+                        Calories = 112;
                         break;
+                    default:
+                        Price = 1.50;
+                        Calories = 112;
+                            break;
                 }
             }
             get
@@ -57,7 +76,7 @@ namespace DinoDiner.Menu.Drinks
         {
             get
             {
-                return new List<string>() { "Sugar", "Carbonation", "Flavor" };
+                return new List<string>() { "Cane Sugar", "Water", "Natural Flavor" };
             }
         }
     }

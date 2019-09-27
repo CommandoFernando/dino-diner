@@ -12,6 +12,7 @@ namespace DinoDiner.Menu.Drinks
     /// </summary>
     public class Tyrannotea : Drink
     {
+        private bool Sweet { get; set; } = false;
         private bool Lemon { get; set; } = false;
         private Size size;
         /// <summary>
@@ -19,8 +20,8 @@ namespace DinoDiner.Menu.Drinks
         /// </summary>
         public Tyrannotea()
         {
-            this.Price = 0;
-            this.Calories = 0;
+            this.Price = .99;
+            this.Calories = 8;
         }
         /// <summary>
         /// Size 
@@ -33,16 +34,24 @@ namespace DinoDiner.Menu.Drinks
                 switch (size)
                 {
                     case Size.Large:
-                        Price = 1.95;
-                        Calories = 480;
+                        Price = 1.99;
+                        Calories = 32;
+                        if (Sweet) { Calories *= 2; }
                         break;
                     case Size.Medium:
-                        Price = 1.45;
-                        Calories = 365;
+                        Price = 1.49;
+                        Calories = 16;
+                        if (Sweet) { Calories *= 2; }
                         break;
                     case Size.Small:
                         Price = .99;
-                        Calories = 222;
+                        Calories = 8;
+                        if (Sweet) { Calories *= 2; }
+                        break;
+                    default:
+                        Price = .99;
+                        Calories = 8;
+                        if (Sweet) { Calories *= 2; }
                         break;
                 }
             }
@@ -58,7 +67,10 @@ namespace DinoDiner.Menu.Drinks
         {
             get
             {
-                return new List<string>() { "Tea" };
+                List<string> ingredients = new List<string>() { "Tea", "Water" };
+                if (Sweet) { ingredients.Add("Cane Sugar"); }
+                if (Lemon) { ingredients.Add("Lemon"); }
+                return ingredients;
             }
         }
         /// <summary>
@@ -67,6 +79,7 @@ namespace DinoDiner.Menu.Drinks
         public void AddLemon()
         {
             this.Lemon = true;
+            //Ingredients.Add("Lemon");
         }
     }
 }

@@ -13,7 +13,7 @@ namespace DinoDiner.Menu.Drinks
     public class JurassicJava : Drink
     {
         private bool RoomForCream { get; set; } = false;
-        private bool Decaf = false;
+        private bool Decaf { get; set; } = false;
         private Size size;
         /// <summary>
         /// Ice inheritence override for hot Java
@@ -26,6 +26,7 @@ namespace DinoDiner.Menu.Drinks
         {
             this.Price = 0;
             this.Calories = 0;
+            this.Size = Size.Small;
         }
         /// <summary>
         /// Method for leaving room for cream
@@ -33,6 +34,13 @@ namespace DinoDiner.Menu.Drinks
         public void LeaveRoomForCream()
         {
             this.RoomForCream = true;
+        }
+        /// <summary>
+        /// Method for adding Ice
+        /// </summary>
+        public void AddIce()
+        {
+            this.Ice = true;
         }
         /// <summary>
         /// Size 
@@ -45,16 +53,20 @@ namespace DinoDiner.Menu.Drinks
                 switch (size)
                 {
                     case Size.Large:
-                        Price = 1.95;
-                        Calories = 480;
+                        Price = 1.49;
+                        Calories = 8;
                         break;
                     case Size.Medium:
-                        Price = 1.45;
-                        Calories = 365;
+                        Price = .99;
+                        Calories = 4;
                         break;
                     case Size.Small:
-                        Price = .99;
-                        Calories = 222;
+                        Price = .59;
+                        Calories = 2;
+                        break;
+                    default:
+                        Price = .59;
+                        Calories = 2;
                         break;
                 }
             }
@@ -70,7 +82,7 @@ namespace DinoDiner.Menu.Drinks
         {
             get
             {
-                return new List<string>() { "Coffee", "Water", "Sugar", "Cream" };
+                return new List<string>() { "Coffee", "Water",};
             }
         }
     }

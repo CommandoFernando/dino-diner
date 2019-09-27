@@ -26,7 +26,7 @@ namespace DinoDiner.Menu.Drinks
         /// </summary>
         public Water()
         {
-            this.Price = 0;
+            this.Price = .10;
             this.Calories = 0;
         }
         /// <summary>
@@ -65,7 +65,9 @@ namespace DinoDiner.Menu.Drinks
         {
             get
             {
-                return new List<string>() { "Water" };
+                List<string> ingredients = new List<string>() { "Water" };
+                if (Lemon) { ingredients.Add("Lemon"); }
+                return ingredients;
             }
         }
     }
