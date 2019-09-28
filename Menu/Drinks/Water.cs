@@ -13,7 +13,10 @@ namespace DinoDiner.Menu.Drinks
     public class Water : Drink
     {
         private Size size;
-        private bool Lemon { get; set; } = false;
+        /// <summary>
+        /// Bool for whether the water has Lemon
+        /// </summary>
+        public bool Lemon { get; set; } = false;
         /// <summary>
         /// Method for adding lemon to water
         /// </summary>
@@ -37,21 +40,6 @@ namespace DinoDiner.Menu.Drinks
             set
             {
                 size = value;
-                switch (size)
-                {
-                    case Size.Large:
-                        Price = 1.95;
-                        Calories = 480;
-                        break;
-                    case Size.Medium:
-                        Price = 1.45;
-                        Calories = 365;
-                        break;
-                    case Size.Small:
-                        Price = .99;
-                        Calories = 222;
-                        break;
-                }
             }
             get
             {

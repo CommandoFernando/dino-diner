@@ -67,7 +67,7 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// Gets or protected sets the Ice
         /// </summary>
-        public virtual bool Ice { get; protected set; } = true;
+        public virtual bool Ice { get; set; } = true;
         /// <summary>
         /// Method for holding the ice
         /// </summary>

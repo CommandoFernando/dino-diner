@@ -131,6 +131,11 @@
             Class for Coffee
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.RoomForCream">
+            <summary>
+            Bool for leaving room for cream
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Drinks.JurassicJava.Ice">
             <summary>
             Ice inheritence override for hot Java
@@ -264,6 +269,11 @@
         <member name="T:DinoDiner.Menu.Drinks.Water">
             <summary>
             Water drink class
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Lemon">
+            <summary>
+            Bool for whether the water has Lemon
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Drinks.Water.AddLemon">

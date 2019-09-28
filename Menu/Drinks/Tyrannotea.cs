@@ -41,23 +41,27 @@ namespace DinoDiner.Menu.Drinks
                 {
                     case Size.Large:
                         Price = 1.99;
-                        Calories = 32;
-                        if (Sweet) { Calories *= 2; }
+                        if (Sweet)
+                        {
+                            Calories = 64;
+                        }
+                        else { Calories = 32; }
                         break;
                     case Size.Medium:
                         Price = 1.49;
-                        Calories = 16;
-                        if (Sweet) { Calories *= 2; }
+                        if (Sweet)
+                        {
+                            Calories = 32;
+                        }
+                        else { Calories = 16; }
                         break;
                     case Size.Small:
                         Price = .99;
-                        Calories = 8;
-                        if (Sweet) { Calories *= 2; }
-                        break;
-                    default:
-                        Price = .99;
-                        Calories = 8;
-                        if (Sweet) { Calories *= 2; }
+                        if (Sweet)
+                        {
+                            Calories = 16;
+                        }
+                        else { Calories = 8; }
                         break;
                 }
             }
@@ -85,7 +89,6 @@ namespace DinoDiner.Menu.Drinks
         public void AddLemon()
         {
             this.Lemon = true;
-            //Ingredients.Add("Lemon");
         }
     }
 }

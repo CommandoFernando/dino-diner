@@ -12,13 +12,16 @@ namespace DinoDiner.Menu.Drinks
     /// </summary>
     public class JurassicJava : Drink
     {
-        private bool RoomForCream { get; set; } = false;
+        /// <summary>
+        /// Bool for leaving room for cream
+        /// </summary>
+        public bool RoomForCream { get; set; } = false;
         private bool Decaf { get; set; } = false;
         private Size size;
         /// <summary>
         /// Ice inheritence override for hot Java
         /// </summary>
-        public override bool Ice { get; protected set; } = false;
+        public override bool Ice { get; set; } = false;
         /// <summary>
         /// Public constructor sets price and calories to default values
         /// </summary>
