@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Steak burger Entree
     /// </summary>
-    public class SteakosaurusBurger : Entree
+    public class SteakosaurusBurger : Entree, IMenuItem
     {
         private bool bun = true;
         private bool pickle = true;
@@ -69,6 +69,14 @@ namespace DinoDiner.Menu
         public void HoldMustard()
         {
             this.mustard = false;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Steakosaurus Burger";
         }
     }
 }

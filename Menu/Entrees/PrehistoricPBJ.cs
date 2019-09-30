@@ -9,7 +9,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// PBJ entree class
     /// </summary>
-    public class PrehistoricPBJ : Entree
+    public class PrehistoricPBJ : Entree, IMenuItem
     {
         private bool peanutButter = true;
         private bool jelly = true;
@@ -48,6 +48,14 @@ namespace DinoDiner.Menu
         public void HoldJelly()
         {
             this.jelly = false;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Prehistoric PB&J";
         }
     }
 }

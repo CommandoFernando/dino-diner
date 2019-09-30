@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     ///Tater tot side
     /// </summary>
-    public class Triceritots : Side
+    public class Triceritots : Side, IMenuItem
     {
         private Size size;
         /// <summary>
@@ -65,6 +65,14 @@ namespace DinoDiner.Menu
         {
             this.Price = 0.99;
             this.Calories = 352;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Triceritots";
         }
     }
 }

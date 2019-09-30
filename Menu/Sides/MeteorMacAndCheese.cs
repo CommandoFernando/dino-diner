@@ -11,8 +11,9 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Side of mack and cheese
     /// </summary>
-    public class MeteorMacAndCheese : Side
+    public class MeteorMacAndCheese : Side, IMenuItem
     {
+
         private Size size;
         /// <summary>
         /// List of ingredients
@@ -65,6 +66,14 @@ namespace DinoDiner.Menu
         {
             this.Price = 0.99;
             this.Calories = 420;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Meteor MacandCheese";
         }
     }
 }

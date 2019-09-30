@@ -10,7 +10,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Class for Coffee
     /// </summary>
-    public class JurassicJava : Drink
+    public class JurassicJava : Drink, IMenuItem
     {
         /// <summary>
         /// Bool for leaving room for cream
@@ -87,6 +87,14 @@ namespace DinoDiner.Menu
             {
                 return new List<string>() { "Coffee", "Water",};
             }
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Jurassic Java";
         }
     }
 }

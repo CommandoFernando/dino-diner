@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Side of Fries
     /// </summary>
-    public class Fryceritops : Side
+    public class Fryceritops : Side, IMenuItem
     {
         private Size size;
         /// <summary>
@@ -61,6 +61,14 @@ namespace DinoDiner.Menu
         {
             this.Price = 0.99;
             this.Calories = 222;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Fryceritops";
         }
     }
 }

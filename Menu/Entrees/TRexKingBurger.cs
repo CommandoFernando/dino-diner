@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// King burger Entree
     /// </summary>
-    public class TRexKingBurger : Entree
+    public class TRexKingBurger :Entree, IMenuItem
     {
         private bool bun = true;
         private bool lettuce = true;
@@ -105,6 +105,14 @@ namespace DinoDiner.Menu
         public void HoldMayo()
         {
             this.mayo = false;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Trex King Burger";
         }
     }
 }

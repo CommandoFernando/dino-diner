@@ -11,8 +11,9 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Chicken Nugget Entree
     /// </summary>
-    public class DinoNuggets : Entree
+    public class DinoNuggets : Entree, IMenuItem
     {
+
         private uint nuggetCount { get; set; }
 
         /// <summary>
@@ -48,6 +49,14 @@ namespace DinoDiner.Menu
             nuggetCount++;
             this.Calories += 59;
             this.Price += .25;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Dinonuggets";
         }
     }
 }

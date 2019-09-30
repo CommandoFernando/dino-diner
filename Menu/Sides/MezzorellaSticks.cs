@@ -11,8 +11,9 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Mozzerella stick side
     /// </summary>
-    public class Mezzorella_Sticks : Side
+    public class Mezzorella_Sticks : Side, IMenuItem
     {
+
         private Size size;
         /// <summary>
         /// List of ingredients
@@ -65,6 +66,14 @@ namespace DinoDiner.Menu
         {
             this.Price = 0.99;
             this.Calories = 540;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Mezzorella Sticks";
         }
     }
 }

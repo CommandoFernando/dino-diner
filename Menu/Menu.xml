@@ -9,6 +9,11 @@
             Combo Class
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Calories">
+            <summary>
+            The Calories of the Item (uint)
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.CretaceousCombo.Entree">
             <summary>
             Entree object for combo
@@ -45,613 +50,728 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entrees.Entree)">
+        <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entree)">
             <summary>
             Combo constructor Sets Entree to entree and initializes Side and Drink to default Value
             </summary>
             <param name="entree"></param>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.SodasaurusFlavor">
+        <member name="T:DinoDiner.Menu.SodasaurusFlavor">
             <summary>
             Enum that defines the soda flavors
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Cola">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cola">
             <summary>
             Cola Flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Orange">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Orange">
             <summary>
             Orage flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Vanilla">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Vanilla">
             <summary>
             Vanilla flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Chocolate">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Chocolate">
             <summary>
             Chocolate flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.RootBeer">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.RootBeer">
             <summary>
             Rootbeer flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Cherry">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cherry">
             <summary>
             Cherry flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Lime">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Lime">
             <summary>
             Lime flavor
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.Drink">
+        <member name="T:DinoDiner.Menu.Drink">
             <summary>
             Drink Class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Drink.Price">
+        <member name="P:DinoDiner.Menu.Drink.Price">
             <summary>
             Gets and sets the price
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Drink.Calories">
+        <member name="P:DinoDiner.Menu.Drink.Calories">
             <summary>
             Gets and sets the calories
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Drink.Ingredients">
+        <member name="P:DinoDiner.Menu.Drink.Ingredients">
             <summary>
             Gets the ingredients list
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Drink.Size">
+        <member name="P:DinoDiner.Menu.Drink.Size">
             <summary>
             Gets or sets the size
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Drink.Ice">
+        <member name="P:DinoDiner.Menu.Drink.Ice">
             <summary>
             Gets or protected sets the Ice
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Drink.HoldIce">
+        <member name="M:DinoDiner.Menu.Drink.HoldIce">
             <summary>
             Method for holding the ice
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.JurassicJava">
+        <member name="T:DinoDiner.Menu.JurassicJava">
             <summary>
             Class for Coffee
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.RoomForCream">
+        <member name="P:DinoDiner.Menu.JurassicJava.RoomForCream">
             <summary>
             Bool for leaving room for cream
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.Ice">
+        <member name="P:DinoDiner.Menu.JurassicJava.Ice">
             <summary>
             Ice inheritence override for hot Java
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.JurassicJava.#ctor">
+        <member name="M:DinoDiner.Menu.JurassicJava.#ctor">
             <summary>
             Public constructor sets price and calories to default values
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.JurassicJava.LeaveRoomForCream">
+        <member name="M:DinoDiner.Menu.JurassicJava.LeaveRoomForCream">
             <summary>
             Method for leaving room for cream
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.JurassicJava.AddIce">
+        <member name="M:DinoDiner.Menu.JurassicJava.AddIce">
             <summary>
             Method for adding Ice
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.Size">
+        <member name="P:DinoDiner.Menu.JurassicJava.Size">
             <summary>
             Size 
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.Ingredients">
+        <member name="P:DinoDiner.Menu.JurassicJava.Ingredients">
             <summary>
             List of ingredients
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.Sodasaurus">
+        <member name="M:DinoDiner.Menu.JurassicJava.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Sodasaurus">
             <summary>
             Class for soda
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Flavor">
+        <member name="P:DinoDiner.Menu.Sodasaurus.Flavor">
             <summary>
             Soda flavor
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Sodasaurus.#ctor">
+        <member name="M:DinoDiner.Menu.Sodasaurus.#ctor">
             <summary>
             Constructor, price and calories to default values
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Size">
+        <member name="P:DinoDiner.Menu.Sodasaurus.Size">
             <summary>
             Size 
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Ingredients">
+        <member name="P:DinoDiner.Menu.Sodasaurus.Ingredients">
             <summary>
             List of ingredients
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.SodasaurusFlavors">
+        <member name="M:DinoDiner.Menu.Sodasaurus.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.SodasaurusFlavors">
             <summary>
             Enum that defines the soda flavors
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavors.Cola">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Cola">
             <summary>
             Cola Flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavors.Orange">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Orange">
             <summary>
             Orage flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavors.Vanilla">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Vanilla">
             <summary>
             Vanilla flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavors.Chocolate">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Chocolate">
             <summary>
             Chocolate flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavors.RootBeer">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavors.RootBeer">
             <summary>
             Rootbeer flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavors.Cherry">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Cherry">
             <summary>
             Cherry flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavors.Lime">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Lime">
             <summary>
             Lime flavor
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.Tyrannotea">
+        <member name="T:DinoDiner.Menu.Tyrannotea">
             <summary>
             Tea drink class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Sweet">
+        <member name="P:DinoDiner.Menu.Tyrannotea.Sweet">
             <summary>
             Bool tells whether sweet
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Lemon">
+        <member name="P:DinoDiner.Menu.Tyrannotea.Lemon">
             <summary>
             bool tells whether lemon
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.#ctor">
+        <member name="M:DinoDiner.Menu.Tyrannotea.#ctor">
             <summary>
             Constructor sets Price and Calories to default values
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Size">
+        <member name="P:DinoDiner.Menu.Tyrannotea.Size">
             <summary>
             Size 
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Ingredients">
+        <member name="P:DinoDiner.Menu.Tyrannotea.Ingredients">
             <summary>
             List of ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.AddLemon">
+        <member name="M:DinoDiner.Menu.Tyrannotea.AddLemon">
             <summary>
             Method for adding lemon to tea
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.Water">
+        <member name="M:DinoDiner.Menu.Tyrannotea.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Water">
             <summary>
             Water drink class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Water.Lemon">
+        <member name="P:DinoDiner.Menu.Water.Lemon">
             <summary>
             Bool for whether the water has Lemon
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Water.AddLemon">
+        <member name="M:DinoDiner.Menu.Water.AddLemon">
             <summary>
             Method for adding lemon to water
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Water.#ctor">
+        <member name="M:DinoDiner.Menu.Water.#ctor">
             <summary>
             Constructor sets size and calories to default values
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Water.Size">
+        <member name="P:DinoDiner.Menu.Water.Size">
             <summary>
             Size 
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Water.Ingredients">
+        <member name="P:DinoDiner.Menu.Water.Ingredients">
             <summary>
             List of ingredients
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
+        <member name="M:DinoDiner.Menu.Water.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Brontowurst">
             <summary>
             Brontowurst Entree
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Ingredients">
+        <member name="P:DinoDiner.Menu.Brontowurst.Ingredients">
             <summary>
             list of ingredients for Brontowurst
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.#ctor">
+        <member name="M:DinoDiner.Menu.Brontowurst.#ctor">
             <summary>
             Default constructor for BrontoWurst sets 
             default price and calories
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldBun">
+        <member name="M:DinoDiner.Menu.Brontowurst.HoldBun">
             <summary>
             Method for Holding the bread
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldPeppers">
+        <member name="M:DinoDiner.Menu.Brontowurst.HoldPeppers">
             <summary>
             Method for removing the peppers from the Brontowurst
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldOnion">
+        <member name="M:DinoDiner.Menu.Brontowurst.HoldOnion">
             <summary>
             Method for removing the Onion from list of ingredients
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.DinoNuggets">
+        <member name="M:DinoDiner.Menu.Brontowurst.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.DinoNuggets">
             <summary>
             Chicken Nugget Entree
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Ingredients">
+        <member name="P:DinoDiner.Menu.DinoNuggets.Ingredients">
             <summary>
             List of ingredients for the chicken nuggets
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.#ctor">
+        <member name="M:DinoDiner.Menu.DinoNuggets.#ctor">
             <summary>
             Default constructor sets the price, calories,
             and Nugget count fields to their default settings.
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.AddNugget">
+        <member name="M:DinoDiner.Menu.DinoNuggets.AddNugget">
             <summary>
             Method for adding an additional chicken nugget to the entree
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.Entree">
+        <member name="M:DinoDiner.Menu.DinoNuggets.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Entree">
             <summary>
             Entree Class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Entree.Price">
+        <member name="P:DinoDiner.Menu.Entree.Price">
             <summary>
             Entree Price
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Entree.Calories">
+        <member name="P:DinoDiner.Menu.Entree.Calories">
             <summary>
             Entree Calories
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Entree.Ingredients">
+        <member name="P:DinoDiner.Menu.Entree.Ingredients">
             <summary>
             Entree Ingredients
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
+        <member name="T:DinoDiner.Menu.PrehistoricPBJ">
             <summary>
             PBJ entree class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Ingredients">
             <summary>
             List of ingredients for PBJ
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.#ctor">
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.#ctor">
             <summary>
             Default constructor for PBJ
             initializes price to default values
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.HoldPeanutButter">
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.HoldPeanutButter">
             <summary>
             Method for removing peanutbutter from ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.HoldJelly">
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.HoldJelly">
             <summary>
             Method for removing the Jelly from ingredients
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.PterodactylWings">
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.PterodactylWings">
             <summary>
             Chicken wing Entree
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Ingredients">
+        <member name="P:DinoDiner.Menu.PterodactylWings.Ingredients">
             <summary>
             List of ingredients for wings
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.PterodactylWings.#ctor">
+        <member name="M:DinoDiner.Menu.PterodactylWings.#ctor">
             <summary>
             Default constructor initializes
             Price and calories to default values
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.SteakosaurusBurger">
+        <member name="M:DinoDiner.Menu.PterodactylWings.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.SteakosaurusBurger">
             <summary>
             Steak burger Entree
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Ingredients">
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Ingredients">
             <summary>
             List of ingredients for SteakBurger
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.#ctor">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.#ctor">
             <summary>
             Default constructor for steak burger
             Sets the price and calories to default values
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldBun">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.HoldBun">
             <summary>
             Method for removing the bun from ingredient list
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldPickle">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.HoldPickle">
             <summary>
             method for removing the pickle from the list of ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldKetchup">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.HoldKetchup">
             <summary>
             Method for removing the Ketchup from the list of ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldMustard">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.HoldMustard">
             <summary>
             Method for removing the mustard from the list of ingredients
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.TRexKingBurger">
             <summary>
             King burger Entree
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Ingredients">
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Ingredients">
             <summary>
             List of king burger ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.#ctor">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.#ctor">
             <summary>
             Constructor initializes Price and Calories
             to default values
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldBun">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldBun">
             <summary>
             Method for removing the bread from the ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldLettuce">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldLettuce">
             <summary>
             Method for removing the lettuce from the ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldTomato">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldTomato">
             <summary>
             Method for removing the tomato from the ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldOnion">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldOnion">
             <summary>
             Method for removing the onion from the ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldPickle">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldPickle">
             <summary>
             Method for removing the pickle from the ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldKetchup">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldKetchup">
             <summary>
             Method for removing the ketchup from the ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMustard">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldMustard">
             <summary>
             Method for removing the mustard from the ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMayo">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldMayo">
             <summary>
             Method for removing the mayo from the ingredients
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.VelociWrap">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.VelociWrap">
             <summary>
             Velociwrap menu item
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.VelociWrap.dressing">
+        <member name="F:DinoDiner.Menu.VelociWrap.dressing">
             <summary>
             Tells whether the wrap has dressing or not
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.VelociWrap.lettuce">
+        <member name="F:DinoDiner.Menu.VelociWrap.lettuce">
             <summary>
             Tells whether the wrap has lettuce
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.VelociWrap.cheese">
+        <member name="F:DinoDiner.Menu.VelociWrap.cheese">
             <summary>
             Tells whether the wrap has cheese
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">
+        <member name="P:DinoDiner.Menu.VelociWrap.Ingredients">
             <summary>
             Ingredient list for VelociWrap
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.#ctor">
+        <member name="M:DinoDiner.Menu.VelociWrap.#ctor">
             <summary>
             VelociWrap default constructor
             sets price and calories to default values
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldDressing">
+        <member name="M:DinoDiner.Menu.VelociWrap.HoldDressing">
             <summary>
             Method for removing dressing
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldLettuce">
+        <member name="M:DinoDiner.Menu.VelociWrap.HoldLettuce">
             <summary>
             Method for Removing the lettuce
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldCheese">
+        <member name="M:DinoDiner.Menu.VelociWrap.HoldCheese">
             <summary>
             Method for Removing the Cheese
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.Fryceritops">
+        <member name="M:DinoDiner.Menu.VelociWrap.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Menu">
+            <summary>
+            Menu class for listing menu items
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.IMenuItem">
+            <summary>
+            Menu Item Interface
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Price">
+            <summary>
+            property with a getter for Price (double)
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Calories">
+            <summary>
+            property with a getter for Calories (uint)
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Ingredients">
+            <summary>
+            property with a getter for Ingredients (a List).
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
             Side of Fries
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Ingredients">
+        <member name="P:DinoDiner.Menu.Fryceritops.Ingredients">
             <summary>
             List of ingredients
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Size">
+        <member name="P:DinoDiner.Menu.Fryceritops.Size">
             <summary>
             Side size
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Sides.Fryceritops.#ctor">
+        <member name="M:DinoDiner.Menu.Fryceritops.#ctor">
             <summary>
             Constructor set Price and Calories to default values
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.MeteorMacAndCheese">
+        <member name="M:DinoDiner.Menu.Fryceritops.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.MeteorMacAndCheese">
             <summary>
             Side of mack and cheese
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Ingredients">
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Ingredients">
             <summary>
             List of ingredients
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Size">
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Size">
             <summary>
             The size of the side
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Sides.MeteorMacAndCheese.#ctor">
+        <member name="M:DinoDiner.Menu.MeteorMacAndCheese.#ctor">
             <summary>
             Constructor set Price and Calories to default values
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.Mezzorella_Sticks">
+        <member name="M:DinoDiner.Menu.MeteorMacAndCheese.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Mezzorella_Sticks">
             <summary>
             Mozzerella stick side
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Mezzorella_Sticks.Ingredients">
+        <member name="P:DinoDiner.Menu.Mezzorella_Sticks.Ingredients">
             <summary>
             List of ingredients
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Mezzorella_Sticks.Size">
+        <member name="P:DinoDiner.Menu.Mezzorella_Sticks.Size">
             <summary>
             side size
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Sides.Mezzorella_Sticks.#ctor">
+        <member name="M:DinoDiner.Menu.Mezzorella_Sticks.#ctor">
             <summary>
             Constructor set Price and Calories to default values
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.Side">
+        <member name="M:DinoDiner.Menu.Mezzorella_Sticks.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Side">
             <summary>
             Abstract side class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Side.Price">
+        <member name="P:DinoDiner.Menu.Side.Price">
             <summary>
             Gets and sets the price
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Side.Calories">
+        <member name="P:DinoDiner.Menu.Side.Calories">
             <summary>
             Gets and sets the calories
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Side.Ingredients">
+        <member name="P:DinoDiner.Menu.Side.Ingredients">
             <summary>
             Gets the ingredients list
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Side.Size">
+        <member name="P:DinoDiner.Menu.Side.Size">
             <summary>
             Gets or sets the size
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.Triceritots">
+        <member name="T:DinoDiner.Menu.Triceritots">
              <summary>
             Tater tot side
              </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Triceritots.Ingredients">
+        <member name="P:DinoDiner.Menu.Triceritots.Ingredients">
             <summary>
             List of ingredients
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Triceritots.Size">
+        <member name="P:DinoDiner.Menu.Triceritots.Size">
             <summary>
             side size
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Sides.Triceritots.#ctor">
+        <member name="M:DinoDiner.Menu.Triceritots.#ctor">
             <summary>
             Constructor set Price and Calories to default values
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Triceritots.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>name of Item</returns>
         </member>
         <member name="T:DinoDiner.Menu.Size">
             <summary>

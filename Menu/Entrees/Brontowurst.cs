@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Brontowurst Entree
     /// </summary>
-    public class Brontowurst : Entree
+    public class Brontowurst : Entree, IMenuItem
     {
         private bool bun = true;
         private bool peppers = true;
@@ -60,6 +60,14 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             this.onions = false;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Brontowurst";
         }
 
     }

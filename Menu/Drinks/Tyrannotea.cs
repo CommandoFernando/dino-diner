@@ -10,7 +10,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Tea drink class
     /// </summary>
-    public class Tyrannotea : Drink
+    public class Tyrannotea : Drink, IMenuItem
     {
         /// <summary>
         /// Bool tells whether sweet
@@ -89,6 +89,14 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             this.Lemon = true;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Tyranno Tea";
         }
     }
 }

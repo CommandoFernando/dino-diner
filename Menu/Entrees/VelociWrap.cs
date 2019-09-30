@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Velociwrap menu item
     /// </summary>
-    public class VelociWrap : Entree
+    public class VelociWrap : Entree, IMenuItem
     {
         /// <summary>
         /// Tells whether the wrap has dressing or not
@@ -68,6 +68,14 @@ namespace DinoDiner.Menu
         public void HoldCheese()
         {
             this.cheese = false;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "VelociWrap";
         }
     }
 }

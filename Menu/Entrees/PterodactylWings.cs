@@ -11,9 +11,8 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Chicken wing Entree
     /// </summary>
-    public class PterodactylWings : Entree
+    public class PterodactylWings : Entree, IMenuItem
     {
-
         /// <summary>
         /// List of ingredients for wings
         /// </summary>
@@ -33,6 +32,14 @@ namespace DinoDiner.Menu
         {
             this.Price = 7.21;
             this.Calories = 318;
+        }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>name of Item</returns>
+        public override string ToString()
+        {
+            return "Pterodactyl Wings";
         }
     }
 }

@@ -14,6 +14,10 @@ namespace DinoDiner.Menu
     public class CretaceousCombo
     {
         /// <summary>
+        /// The Calories of the Item (uint)
+        /// </summary>
+        public uint Calories { get; set; }
+        /// <summary>
         /// Entree object for combo
         /// </summary>
         public Entree Entree { get; set; }
