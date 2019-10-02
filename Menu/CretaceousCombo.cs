@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Combo Class
     /// </summary>
-    public class CretaceousCombo
+    public class CretaceousCombo : IMenuItem
     {
         /// <summary>
         /// The Calories of the Item (uint)
