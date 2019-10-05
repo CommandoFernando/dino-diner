@@ -30,8 +30,8 @@ namespace DinoDiner.Menu
         /// </summary>
         public JurassicJava()
         {
-            this.Price = 0;
-            this.Calories = 0;
+            this.Price = .59;
+            this.Calories = 2;
             this.Size = Size.Small;
         }
         /// <summary>

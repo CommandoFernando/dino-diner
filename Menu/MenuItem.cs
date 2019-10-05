@@ -1,4 +1,4 @@
-﻿/*MenuItem.cs
+﻿/* MenuItem.cs
  * Author: Fernando Velarde
  */
 using System;
