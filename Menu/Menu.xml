@@ -44,57 +44,17 @@
             Combo Ingredient list
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.CretaceousCombo.ToString">
-            <summary>
-            Custom to string for combo
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entree)">
             <summary>
             Combo constructor Sets Entree to entree and initializes Side and Drink to default Value
             </summary>
             <param name="entree"></param>
         </member>
-        <member name="T:DinoDiner.Menu.SodasaurusFlavor">
+        <member name="M:DinoDiner.Menu.CretaceousCombo.ToString">
             <summary>
-            Enum that defines the soda flavors
+            To string method
             </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cola">
-            <summary>
-            Cola Flavor
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Orange">
-            <summary>
-            Orage flavor
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Vanilla">
-            <summary>
-            Vanilla flavor
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Chocolate">
-            <summary>
-            Chocolate flavor
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavor.RootBeer">
-            <summary>
-            Rootbeer flavor
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cherry">
-            <summary>
-            Cherry flavor
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Lime">
-            <summary>
-            Lime flavor
-            </summary>
+            <returns>string for combo</returns>
         </member>
         <member name="T:DinoDiner.Menu.Drink">
             <summary>
@@ -139,6 +99,11 @@
         <member name="P:DinoDiner.Menu.JurassicJava.RoomForCream">
             <summary>
             Bool for leaving room for cream
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.Decaf">
+            <summary>
+            bool for whether coffee is decaf or not
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.JurassicJava.Ice">
@@ -208,42 +173,42 @@
             </summary>
             <returns>name of Item</returns>
         </member>
-        <member name="T:DinoDiner.Menu.SodasaurusFlavors">
+        <member name="T:DinoDiner.Menu.SodasaurusFlavor">
             <summary>
             Enum that defines the soda flavors
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Cola">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cola">
             <summary>
             Cola Flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Orange">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Orange">
             <summary>
             Orage flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Vanilla">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Vanilla">
             <summary>
             Vanilla flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Chocolate">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Chocolate">
             <summary>
             Chocolate flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavors.RootBeer">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.RootBeer">
             <summary>
             Rootbeer flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Cherry">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cherry">
             <summary>
             Cherry flavor
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.SodasaurusFlavors.Lime">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Lime">
             <summary>
             Lime flavor
             </summary>
@@ -624,6 +589,37 @@
             Menu class for listing menu items
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableMenuItems">
+            <summary>
+            Getter for all available menu items list
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableEntrees">
+            <summary>
+            getter for available entrees list
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableSides">
+            <summary>
+            getter for available sides list
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableDrinks">
+            <summary>
+            getter for available drinks list
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableCombos">
+            <summary>
+            getter for available combos
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.ToString">
+            <summary>
+            ToString override method
+            </summary>
+            <returns>menu items on seperate lines</returns>
+        </member>
         <member name="T:DinoDiner.Menu.IMenuItem">
             <summary>
             Menu Item Interface
@@ -642,6 +638,11 @@
         <member name="P:DinoDiner.Menu.IMenuItem.Ingredients">
             <summary>
             property with a getter for Ingredients (a List).
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Order">
+            <summary>
+            Order Class
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
@@ -696,27 +697,27 @@
             </summary>
             <returns>name of Item</returns>
         </member>
-        <member name="T:DinoDiner.Menu.Mezzorella_Sticks">
+        <member name="T:DinoDiner.Menu.MezzorellaSticks">
             <summary>
             Mozzerella stick side
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Mezzorella_Sticks.Ingredients">
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Ingredients">
             <summary>
             List of ingredients
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Mezzorella_Sticks.Size">
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Size">
             <summary>
             side size
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Mezzorella_Sticks.#ctor">
+        <member name="M:DinoDiner.Menu.MezzorellaSticks.#ctor">
             <summary>
             Constructor set Price and Calories to default values
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Mezzorella_Sticks.ToString">
+        <member name="M:DinoDiner.Menu.MezzorellaSticks.ToString">
             <summary>
             ToString override method
             </summary>

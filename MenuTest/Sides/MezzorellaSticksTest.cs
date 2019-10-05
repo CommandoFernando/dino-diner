@@ -8,21 +8,21 @@ namespace MenuTest.Sides
         [Fact]
         public void ShouldHaveCorrectDefaultPrice()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             Assert.Equal(0.99, ms.Price, 2);
         }
 
         [Fact]
         public void ShouldHaveCorrectDefaultCalories()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             Assert.Equal<uint>(540, ms.Calories);
         }
 
         [Fact]
         public void ShouldHaveCorrectIngedients()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             Assert.Contains<string>("Breading", ms.Ingredients);
             Assert.Contains<string>("Cheese Product", ms.Ingredients);
             Assert.Contains<string>("Vegetable Oil", ms.Ingredients);
@@ -32,14 +32,14 @@ namespace MenuTest.Sides
         [Fact]
         public void ShouldHaveCorrectDefaultSize()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             Assert.Equal<Size>(Size.Small, ms.Size);
         }
 
         [Fact]
         public void ShouldUseCorrectPriceForMedium()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             ms.Size = Size.Medium;
             Assert.Equal(1.45, ms.Price, 2);
         }
@@ -47,7 +47,7 @@ namespace MenuTest.Sides
         [Fact]
         public void ShouldUseCorrectCaloriesForMedium()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             ms.Size = Size.Medium;
             Assert.Equal<uint>(610, ms.Calories);
         }
@@ -55,7 +55,7 @@ namespace MenuTest.Sides
         [Fact]
         public void ShouldBeAbleToSetSizeToMedium()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             ms.Size = Size.Medium;
             Assert.Equal<Size>(Size.Medium, ms.Size);
         }
@@ -63,7 +63,7 @@ namespace MenuTest.Sides
         [Fact]
         public void ShouldUseCorrectPriceForLarge()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             ms.Size = Size.Large;
             Assert.Equal(1.95, ms.Price, 2);
         }
@@ -71,7 +71,7 @@ namespace MenuTest.Sides
         [Fact]
         public void ShouldUseCorrectCaloriesForLarge()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             ms.Size = Size.Large;
             Assert.Equal<uint>(720, ms.Calories);
         }
@@ -79,7 +79,7 @@ namespace MenuTest.Sides
         [Fact]
         public void ShouldBeAbleToSetSizeToLarge()
         {
-            Mezzorella_Sticks ms = new Mezzorella_Sticks();
+            MezzorellaSticks ms = new MezzorellaSticks();
             ms.Size = Size.Large;
             Assert.Equal<Size>(Size.Large, ms.Size);
         }

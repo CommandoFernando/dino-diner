@@ -16,7 +16,10 @@ namespace DinoDiner.Menu
         /// Bool for leaving room for cream
         /// </summary>
         public bool RoomForCream { get; set; } = false;
-        private bool Decaf { get; set; } = false;
+        /// <summary>
+        /// bool for whether coffee is decaf or not
+        /// </summary>
+        public bool Decaf { get; set; } = false;
         private Size size;
         /// <summary>
         /// Ice inheritence override for hot Java
@@ -94,7 +97,8 @@ namespace DinoDiner.Menu
         /// <returns>name of Item</returns>
         public override string ToString()
         {
-            return "Jurassic Java";
+            if (Decaf) { return Size + " Decaf Jurassic Java"; }
+            return Size + " Jurassic Java";
         }
     }
 }

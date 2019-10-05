@@ -12,11 +12,11 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Sodasaurus : Drink, IMenuItem
     {
-        private SodasaurusFlavors flavor = SodasaurusFlavors.Cola;
+        private SodasaurusFlavor flavor = SodasaurusFlavor.Cola;
         /// <summary>
         /// Soda flavor
         /// </summary>
-        public SodasaurusFlavors Flavor {
+        public SodasaurusFlavor Flavor {
             get
             {
                 return flavor;
@@ -85,7 +85,7 @@ namespace DinoDiner.Menu
         /// <returns>name of Item</returns>
         public override string ToString()
         {
-            return "Sodasaurus";
+            return Size + " " + flavor + " Sodasaurus";
         }
     }
 }

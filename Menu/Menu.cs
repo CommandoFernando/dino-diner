@@ -2,29 +2,81 @@
  * Author: Fernando Velarde
  */
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using DinoDiner.Menu;
 
 namespace DinoDiner.Menu
-{ 
+{
     /// <summary>
     /// Menu class for listing menu items
     /// </summary>
     public class Menu
     {
-            //get
-           // {
-          //      List<Drink> drinks = new List<Drink>();
-           //     drinks.Add(new Drink());
-          //  }
+        /// <summary>
+        /// Getter for all available menu items list
+        /// </summary>
+        public List<IMenuItem> AvailableMenuItems
+        {
+            get
+            {
+                List<IMenuItem> menuItems = new List<IMenuItem>();
+                return menuItems;
+            }
 
-      /*  You will also need to define a Menu class in the DinoDiner.
-       *  Menu namespace which provides a property with a getter for AvailableMenuItems(List) 
-       *  which should return a list containing one instance of every menu item currently offered
-       *  by DinoDiner. It should also implement a property with a getter to return all available entrees(AvailableEntrees), 
-            sides(AvailableSides), drinks(AvailableDrinks), and combos(AvailableCombos).
-
-            It should also override the ToString() method to display the full menu contents, separated by 
-            new line characters(\n). */
+        }
+        /// <summary>
+        /// getter for available entrees list
+        /// </summary>
+        public List<Entree> AvailableEntrees
+        {
+            get
+            {
+                List<Entree> availableEntrees = new List<Entree>();
+                return availableEntrees;
+            }
+        }
+        /// <summary>
+        /// getter for available sides list
+        /// </summary>
+        public List<Side> AvailableSides
+        {
+            get
+            {
+                List<Side> sides = new List<Side>();
+                return sides;
+            }
+        }
+        /// <summary>
+        /// getter for available drinks list
+        /// </summary>
+        public List<Drink> AvailableDrinks
+        {
+            get
+            {
+                List<Drink> drinks = new List<Drink>();
+                return drinks;
+            }
+        }
+        /// <summary>
+        /// getter for available combos
+        /// </summary>
+        public List<CretaceousCombo> AvailableCombos { get; }
+        /// <summary>
+        /// ToString override method
+        /// </summary>
+        /// <returns>menu items on seperate lines</returns>
+        public override string ToString()
+        {
+            List<IMenuItem> menu = AvailableMenuItems;
+            List<string> menu2 = new List<string>();
+            foreach (IMenuItem m in menu)
+            {
+                menu2.Add(m.ToString());
+                menu2.Add("/n");
+            }
+            return menu2.ToString();
+        }
     }
 }

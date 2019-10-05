@@ -67,15 +67,6 @@ namespace DinoDiner.Menu
                 return ingredients;
             }
         }
-        /// <summary>
-        /// Custom to string for combo
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            return $"";
-        }
-
         private CretaceousCombo() { }
         /// <summary>
         /// Combo constructor Sets Entree to entree and initializes Side and Drink to default Value
@@ -86,6 +77,14 @@ namespace DinoDiner.Menu
             Entree = entree;
             Side = new Fryceritops();
             Drink = new Sodasaurus();
+        }
+        /// <summary>
+        /// To string method
+        /// </summary>
+        /// <returns>string for combo</returns>
+        public override string ToString()
+        {
+            return Entree + " Combo";
         }
     }
 }
