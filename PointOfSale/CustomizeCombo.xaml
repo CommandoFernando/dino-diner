@@ -1,0 +1,81 @@
+﻿<Page x:Class="PointOfSale.CustomizeCombo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PointOfSale"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CustomizeCombo">
+
+    <Grid Background="YellowGreen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="1" Grid.Column="1"  FontSize="24" FontWeight="UltraBold" Foreground="Green">
+            Entree
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-06.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        
+        <Button Grid.Row="1" Grid.Column="3"  FontSize="24" FontWeight="UltraBold" Foreground="Green">
+            Side
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        
+        <Button Grid.Row="3" Grid.Column="1"  FontSize="24" FontWeight="UltraBold" Foreground="Green">
+            Small
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        
+        <Button Grid.Row="3" Grid.Column="2"  FontSize="24" FontWeight="UltraBold" Foreground="Green">
+            Medium
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        
+        <Button Grid.Row="3" Grid.Column="3"  FontSize="24" FontWeight="UltraBold" Foreground="Green">
+            Large
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="2"  FontSize="24" FontWeight="UltraBold" Foreground="Green">
+            Flavor
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        
+        <Label Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack">
+            Add to Order
+        </Label>
+        <Label Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack">
+            Customize Combo
+        </Label>
+    </Grid>
+</Page>

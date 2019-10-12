@@ -8,18 +8,51 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Menu Catagory Selection">
 
-    <Grid>
+    <Grid Background="YellowGreen">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Button Click="SelectCombo" Grid.Row="0" Grid.Column="0">Combos</Button>
-        <Button Grid.Row="0" Grid.Column="1">Entrees</Button>
-        <Button Grid.Row="1" Grid.Column="0">Drinks</Button>
-        <Button Grid.Row="1" Grid.Column="1">Sides</Button>
+        <Button Grid.Row="2" Grid.Column="1"  FontSize="24" FontWeight="UltraBold" Foreground="Green" Click="SelectEntree">
+            Entrees
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-06.png" Stretch="UniformToFill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="2"  FontSize="24" FontWeight="UltraBold" Foreground="Green" Click="SelectCombo">
+            Combos
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-04.png" Stretch="UniformToFill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="2"  FontSize="24" FontWeight="UltraBold" Foreground="Green" Click="SelectDrink">
+            Drinks
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="3"  FontSize="24" FontWeight="UltraBold" Foreground="Green" Click="SelectSide">
+            Sides
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="UniformToFill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" Foreground="Brown">
+            Add to Order
+        </Label>
     </Grid>
 </Page>
