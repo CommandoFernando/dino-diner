@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* ComboSelection.xaml.cs
+ * Author: Fernando Velarde
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +23,19 @@ namespace PointOfSale
     /// </summary>
     public partial class ComboSelection : Page
     {
+        /// <summary>
+        /// ComboSelection default construction
+        /// </summary>
         public ComboSelection()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Changes pages from combo selection
+        /// to customize combo page
+        /// </summary>
+        /// <param name="sender">default sender</param>
+        /// <param name="args">default args</param>
         private void CustomizeCombo(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new CustomizeCombo());

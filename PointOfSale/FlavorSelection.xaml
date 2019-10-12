@@ -8,7 +8,81 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FlavorSelection">
 
-    <Grid>
-        
+    <Grid Background="SaddleBrown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="1" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Red">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Cherry</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/Cherry.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="1" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Yellow">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Lime</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/lime.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="BlanchedAlmond">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Vanilla</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/cola.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="Brown">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Chocolate</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/Orange.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Orange">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Orange</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/orange.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Cola</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/Cola.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="RosyBrown">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Root Bear</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/Orange.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap">
+            Add to Order
+        </TextBlock>
     </Grid>
 </Page>

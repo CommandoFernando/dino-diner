@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* CustomizeCombo.xaml.cs
+ * Author: Fernando Velarde
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,32 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCombo : Page
     {
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public CustomizeCombo()
         {
             InitializeComponent();
+        }
+        /// <summary>
+        /// Changes page from Customize combo to
+        /// Flavor selection
+        /// </summary>
+        /// <param name="sender">Default</param>
+        /// <param name="args">Default</param>
+        private void SelectFlavor(object sender, RoutedEventArgs args)
+        {
+            NavigationService.Navigate(new FlavorSelection());
+        }
+        /// <summary>
+        /// Changes Page from Customize Combo to 
+        /// Side selection page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void SelectSide(object sender, RoutedEventArgs args)
+        {
+            NavigationService.Navigate(new SideSelection());
         }
     }
 }

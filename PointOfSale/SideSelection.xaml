@@ -8,7 +8,87 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SideSelection">
 
-    <Grid>
+    <Grid Background="SaddleBrown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="1" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="DarkOrange">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Fryceritops</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="Yellow">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Bottom">Meteor Mac &amp; Cheese</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-09.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="LightGoldenrodYellow">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Mezzorella Sticks</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-10.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Brown">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Triceritots</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-11.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="1" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Small</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
         
+        <Button Grid.Row="2" Grid.Column="5"  FontSize="24" FontWeight="UltraBold" Foreground="Black">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Medium</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="5"  FontSize="34" FontWeight="UltraBold" Foreground="Black">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Large</TextBlock>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap">
+            Add to Order
+        </TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap">
+            Size
+        </TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap">
+            Side
+        </TextBlock>
     </Grid>
 </Page>
