@@ -173,6 +173,16 @@
             </summary>
             <returns>name of Item</returns>
         </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Description">
+            <summary>
+            returns the description
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Special">
+            <summary>
+            gets the special instructions
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.SodasaurusFlavor">
             <summary>
             Enum that defines the soda flavors
@@ -377,6 +387,33 @@
         <member name="T:DinoDiner.Menu.PrehistoricPBJ">
             <summary>
             PBJ entree class
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.PrehistoricPBJ.peanutButter">
+            <summary>
+            Backing variables
+            </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.PrehistoricPBJ.PropertyChanged">
+            <summary>
+            The PropertyChanged event handler; notifies of changes to the Price, Description, and
+            Special properties
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.NotifyOfPropertyChange(System.String)">
+            <summary>
+            Helper function for property changed
+            </summary>
+            <param name="propertyname"></param>
+        </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Description">
+            <summary>
+            gets and sets description
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Special">
+            <summary>
+            gets description of special instructions
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.PrehistoricPBJ.Ingredients">
@@ -584,6 +621,26 @@
             </summary>
             <returns>name of Item</returns>
         </member>
+        <member name="T:DinoDiner.Menu.IMenuItem">
+            <summary>
+            Menu Item Interface
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Price">
+            <summary>
+            property with a getter for Price (double)
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Calories">
+            <summary>
+            property with a getter for Calories (uint)
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Ingredients">
+            <summary>
+            property with a getter for Ingredients (a List).
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Menu">
             <summary>
             Menu class for listing menu items
@@ -619,26 +676,6 @@
             ToString override method
             </summary>
             <returns>menu items on seperate lines</returns>
-        </member>
-        <member name="T:DinoDiner.Menu.IMenuItem">
-            <summary>
-            Menu Item Interface
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.IMenuItem.Price">
-            <summary>
-            property with a getter for Price (double)
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.IMenuItem.Calories">
-            <summary>
-            property with a getter for Calories (uint)
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.IMenuItem.Ingredients">
-            <summary>
-            property with a getter for Ingredients (a List).
-            </summary>
         </member>
         <member name="T:DinoDiner.Menu.Order">
             <summary>

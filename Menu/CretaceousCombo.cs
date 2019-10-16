@@ -16,7 +16,16 @@ namespace DinoDiner.Menu
         /// <summary>
         /// The Calories of the Item (uint)
         /// </summary>
-        public uint Calories { get; set; }
+        public uint Calories {
+            get
+            {
+                return Drink.Calories + Entree.Calories + Side.Calories;
+            }
+            set
+            {
+                Calories = value;
+            }
+        }
         /// <summary>
         /// Entree object for combo
         /// </summary>
@@ -84,7 +93,28 @@ namespace DinoDiner.Menu
         /// <returns>string for combo</returns>
         public override string ToString()
         {
-            return Entree + " Combo";
+            return $"{Entree} Combo";
+        }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+        public string[] Special
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+                //ingredients.AddRange(Entree.Special);
+                ingredients.Add(Side.ToString());
+                //ingredients.AddRange(Side.Special);
+                ingredients.Add(Drink.ToString());
+                //ingredients.AddRange(Drink.Special);
+                return ingredients.ToArray();
+                //Entree.Special;
+            }
         }
     }
 }

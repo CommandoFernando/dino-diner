@@ -3,16 +3,53 @@
 */
 
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// PBJ entree class
     /// </summary>
-    public class PrehistoricPBJ : Entree, IMenuItem
+    public class PrehistoricPBJ : Entree, IMenuItem, INotifyPropertyChanged, IOrderItem
     {
+        /// <summary>
+        /// Backing variables
+        /// </summary>
         private bool peanutButter = true;
         private bool jelly = true;
+        /// <summary>
+        /// The PropertyChanged event handler; notifies of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Helper function for property changed
+        /// </summary>
+        /// <param name="propertyname"></param>
+        private void NotifyOfPropertyChange(string propertyname)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
+        }
+        /// <summary>
+        /// gets and sets description
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// gets description of special instructions
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!peanutButter) special.Add("Hold Peanut Butter");
+                if (!jelly) special.Add("Hold Jelly");
+                return special.ToArray();
+            }
+        }
         /// <summary>
         /// List of ingredients for PBJ
         /// </summary>
@@ -41,6 +78,8 @@ namespace DinoDiner.Menu
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
         /// <summary>
         /// Method for removing the Jelly from ingredients
@@ -48,6 +87,8 @@ namespace DinoDiner.Menu
         public void HoldJelly()
         {
             this.jelly = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
         /// <summary>
         /// ToString override method
