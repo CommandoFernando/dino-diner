@@ -1,17 +1,17 @@
 ﻿/* Side.cs
  * Author: Fernando Velarde
  */
-
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Abstract side class
     /// </summary>
-    public abstract class Side
+    public abstract class Side: IMenuItem, IOrderItem
     {
         /// <summary>
         /// Gets and sets the price
@@ -32,6 +32,16 @@ namespace DinoDiner.Menu
         /// Gets or sets the size
         /// </summary>
         public abstract Size Size { get; set; }
-
+        /// <summary>
+        /// gets and sets description
+        /// </summary>
+        public virtual string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// gets description of special instructions
+        /// </summary>
+        public abstract string[] Special { get; }
     }
 }

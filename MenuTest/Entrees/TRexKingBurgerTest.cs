@@ -106,7 +106,12 @@ namespace MenuTest.Entrees
             trex.HoldMayo();
             Assert.DoesNotContain<string>("Mayo", trex.Ingredients);
         }
-
+        [Fact]
+        public void ShouldHaveEmptySpecialListByDefault()
+        {
+            TRexKingBurger kb = new TRexKingBurger();
+            Assert.Empty(kb.Special);
+        }
     }
 
 }

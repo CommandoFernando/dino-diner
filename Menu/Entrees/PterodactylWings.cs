@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Chicken wing Entree
     /// </summary>
-    public class PterodactylWings : Entree, IMenuItem
+    public class PterodactylWings : Entree, IMenuItem, INotifyPropertyChanged
     {
         /// <summary>
         /// List of ingredients for wings
@@ -40,6 +41,30 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return "Pterodactyl Wings";
+        }
+        /// <summary>
+        /// gets description of special instructions
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
+        }
+        /// <summary>
+        /// The PropertyChanged event handler; notifies of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Helper function for property changed
+        /// </summary>
+        /// <param name="propertyname"></param>
+        protected void NotifyOfPropertyChange(string propertyname)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
     }
 }

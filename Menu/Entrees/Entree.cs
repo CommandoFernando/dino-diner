@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Entree Class
     /// </summary>
-    public abstract class Entree
+    public abstract class Entree : IMenuItem, IOrderItem
     {
         /// <summary>
         /// Entree Price
@@ -25,5 +26,16 @@ namespace DinoDiner.Menu
         /// Entree Ingredients
         /// </summary>
         public abstract List<string> Ingredients { get; }
+        /// <summary>
+        /// gets and sets description
+        /// </summary>
+        public virtual string Description
+        {
+            get { return this.ToString(); }
+        }
+        /// <summary>
+        /// gets description of special instructions
+        /// </summary>
+        public abstract string[] Special { get; }
     }
 }

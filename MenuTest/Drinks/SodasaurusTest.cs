@@ -202,5 +202,30 @@ namespace MenuTest.Drinks
             Assert.Contains<string>("Cane Sugar", soda.Ingredients);
             Assert.Equal<int>(3, soda.Ingredients.Count);
         }
+        [Fact]
+        public void ShouldHaveEmptySpecialListByDefault()
+        {
+            Sodasaurus ss = new Sodasaurus();
+            Assert.Empty(ss.Special);
+        }
+        [Fact]
+        public void SpecialShouldHoldIce()
+        {
+            Sodasaurus ss = new Sodasaurus();
+            ss.HoldIce();
+            Assert.Collection<string>(ss.Special, item =>
+            {
+                Assert.Equal("Hold Ice", item);
+            });
+        }
+        [Fact]
+        public void HoldIceShouldNotifyOfSpecialPropertyChange()
+        {
+            Sodasaurus ss = new Sodasaurus();
+            Assert.PropertyChanged(ss, "Special", () =>
+            {
+                ss.HoldIce();
+            });
+        }
     }
 }

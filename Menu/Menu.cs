@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -21,8 +22,12 @@ namespace DinoDiner.Menu
         {
             get
             {
+
                 List<IMenuItem> menuItems = new List<IMenuItem>();
-                menuItems.Add(new Brontowurst());
+                menuItems.AddRange(AvailableEntrees);
+                menuItems.AddRange(AvailableSides);
+                menuItems.AddRange(AvailableDrinks);
+                /*menuItems.Add(new Brontowurst());
                 menuItems.Add(new DinoNuggets());
                 menuItems.Add(new PrehistoricPBJ());
                 menuItems.Add(new PterodactylWings());
@@ -36,7 +41,7 @@ namespace DinoDiner.Menu
                 menuItems.Add(new Sodasaurus());
                 menuItems.Add(new Tyrannotea());
                 menuItems.Add(new JurassicJava());
-                menuItems.Add(new Water());
+                menuItems.Add(new Water());*/
                 return menuItems;
             }
 

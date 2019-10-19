@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Brontowurst Entree
     /// </summary>
-    public class Brontowurst : Entree, IMenuItem
+    public class Brontowurst : Entree, IMenuItem, INotifyPropertyChanged
     {
         private bool bun = true;
         private bool peppers = true;
@@ -32,6 +33,20 @@ namespace DinoDiner.Menu
             }
         }
         /// <summary>
+        /// gets description of special instructions
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!bun) special.Add("Hold Whole Wheat Bun");
+                if (!peppers) special.Add("Hold Peppers");
+                if (!onions) special.Add("Hold Onion");
+                return special.ToArray();
+            }
+        }
+        /// <summary>
         /// Default constructor for BrontoWurst sets 
         /// default price and calories
         /// </summary>
@@ -46,6 +61,8 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             this.bun = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
         /// <summary>
         /// Method for removing the peppers from the Brontowurst
@@ -53,6 +70,8 @@ namespace DinoDiner.Menu
         public void HoldPeppers()
         {
             this.peppers = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
         /// <summary>
         /// Method for removing the Onion from list of ingredients
@@ -60,6 +79,8 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             this.onions = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
         /// <summary>
         /// ToString override method
@@ -69,6 +90,18 @@ namespace DinoDiner.Menu
         {
             return "Brontowurst";
         }
-
+        /// <summary>
+        /// The PropertyChanged event handler; notifies of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Helper function for property changed
+        /// </summary>
+        /// <param name="propertyname"></param>
+        protected void NotifyOfPropertyChange(string propertyname)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
+        }
     }
 }

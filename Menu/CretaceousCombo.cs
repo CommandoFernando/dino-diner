@@ -5,13 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Combo Class
     /// </summary>
-    public class CretaceousCombo : IMenuItem
+    public class CretaceousCombo : IMenuItem, INotifyPropertyChanged
     {
         /// <summary>
         /// The Calories of the Item (uint)
@@ -51,6 +52,8 @@ namespace DinoDiner.Menu
                 this.size = value;
                 this.Drink.Size = value;
                 this.Side.Size = value;
+                NotifyOfPropertyChange("Special");
+                NotifyOfPropertyChange("Ingredients");
             }
         }
         /// <summary>
@@ -95,6 +98,9 @@ namespace DinoDiner.Menu
         {
             return $"{Entree} Combo";
         }
+        /// <summary>
+        /// The description of the item
+        /// </summary>
         public string Description
         {
             get
@@ -102,19 +108,35 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
+        /// <summary>
+        /// Gets the special instructions
+        /// </summary>
         public string[] Special
         {
             get
             {
                 List<string> ingredients = new List<string>();
-                //ingredients.AddRange(Entree.Special);
+                ingredients.Add(Entree.ToString());
+                ingredients.AddRange(Entree.Special);
                 ingredients.Add(Side.ToString());
-                //ingredients.AddRange(Side.Special);
+                ingredients.AddRange(Side.Special);
                 ingredients.Add(Drink.ToString());
-                //ingredients.AddRange(Drink.Special);
+                ingredients.AddRange(Drink.Special);
                 return ingredients.ToArray();
-                //Entree.Special;
             }
+        }
+        /// <summary>
+        /// The PropertyChanged event handler; notifies of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Helper function for property changed
+        /// </summary>
+        /// <param name="propertyname"></param>
+        protected void NotifyOfPropertyChange(string propertyname)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
     }
 }

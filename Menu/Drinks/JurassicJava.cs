@@ -4,13 +4,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Class for Coffee
     /// </summary>
-    public class JurassicJava : Drink, IMenuItem
+    public class JurassicJava : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Bool for leaving room for cream
@@ -40,6 +41,8 @@ namespace DinoDiner.Menu
         public void LeaveRoomForCream()
         {
             this.RoomForCream = true;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
         /// <summary>
         /// Method for adding Ice
@@ -47,6 +50,8 @@ namespace DinoDiner.Menu
         public void AddIce()
         {
             this.Ice = true;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
         /// <summary>
         /// Size 
@@ -61,18 +66,26 @@ namespace DinoDiner.Menu
                     case Size.Large:
                         Price = 1.49;
                         Calories = 8;
+                        NotifyOfPropertyChange("Special");
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Medium:
                         Price = .99;
                         Calories = 4;
+                        NotifyOfPropertyChange("Special");
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Small:
                         Price = .59;
                         Calories = 2;
+                        NotifyOfPropertyChange("Special");
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                     default:
                         Price = .59;
                         Calories = 2;
+                        NotifyOfPropertyChange("Special");
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                 }
             }
@@ -99,6 +112,33 @@ namespace DinoDiner.Menu
         {
             if (Decaf) { return Size + " Decaf Jurassic Java"; }
             return Size + " Jurassic Java";
+        }
+        /// <summary>
+        /// gets description of special instructions
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (Decaf) special.Add("Defac");
+                if (Ice) special.Add("Add Ice");
+                if (RoomForCream) special.Add("Leave room for cream");
+                return special.ToArray();
+            }
+        }
+        /// <summary>
+        /// The PropertyChanged event handler; notifies of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public override event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Helper function for property changed
+        /// </summary>
+        /// <param name="propertyname"></param>
+        protected override void NotifyOfPropertyChange(string propertyname)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
     }
 }

@@ -4,13 +4,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Class for soda
     /// </summary>
-    public class Sodasaurus : Drink, IMenuItem
+    public class Sodasaurus : Drink, IMenuItem, INotifyPropertyChanged
     {
         private SodasaurusFlavor flavor = SodasaurusFlavor.Cola;
         /// <summary>
@@ -24,6 +25,8 @@ namespace DinoDiner.Menu
             set
             {
                 flavor = value;
+                NotifyOfPropertyChange("Special");
+                NotifyOfPropertyChange("Ingredients");
             }
         }
         private Size size;
@@ -49,19 +52,23 @@ namespace DinoDiner.Menu
                     case Size.Large:
                         Price = 2.50;
                         Calories = 208;
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Medium:
                         Price = 2.00;
                         Calories = 156;
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Small:
                         Price = 1.50;
                         Calories = 112;
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                     default:
                         Price = 1.50;
                         Calories = 112;
-                            break;
+                        NotifyOfPropertyChange("Ingredients");
+                        break;
                 }
             }
             get
@@ -90,14 +97,14 @@ namespace DinoDiner.Menu
         /// <summary>
         /// returns the description
         /// </summary>
-        public string Description
+        public override string Description
         {
             get { return this.ToString(); }
         }
         /// <summary>
         /// gets the special instructions
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {
@@ -105,6 +112,19 @@ namespace DinoDiner.Menu
                 if (!Ice) special.Add("Hold Ice");
                 return special.ToArray();
             }
+        }
+        /// <summary>
+        /// The PropertyChanged event handler; notifies of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public override event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Helper function for property changed
+        /// </summary>
+        /// <param name="propertyname"></param>
+        protected override void NotifyOfPropertyChange(string propertyname)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
     }
 }

@@ -166,5 +166,49 @@ namespace MenuTest.Drinks
             Assert.Contains<string>("Coffee", java.Ingredients);
             Assert.Equal<int>(2, java.Ingredients.Count);
         }
+        [Fact]
+        public void ShouldHaveEmptySpecialListByDefault()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.Empty(jj.Special);
+        }
+        [Fact]
+        public void SpecialShouldLeaveRoomForCream()
+        {
+            JurassicJava jj = new JurassicJava();
+            jj.LeaveRoomForCream();
+            Assert.Collection<string>(jj.Special, item =>
+            {
+                Assert.Equal("Leave room for cream", item);
+            });
+        }
+        [Fact]
+        public void SpecialShouldAddIce()
+        {
+            JurassicJava jj = new JurassicJava();
+            jj.AddIce();
+            Assert.Collection<string>(jj.Special, item =>
+            {
+                Assert.Equal("Add Ice", item);
+            });
+        }
+        [Fact]
+        public void LeaveRoomForCreamShouldNotifyOfSpecialPropertyChange()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.PropertyChanged(jj, "Special", () =>
+            {
+                jj.LeaveRoomForCream();
+            });
+        }
+        [Fact]
+        public void AddIceShouldNotifyOfSpecialPropertyChange()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.PropertyChanged(jj, "Special", () =>
+            {
+                jj.AddIce();
+            });
+        }
     }
 }

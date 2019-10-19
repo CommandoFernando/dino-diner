@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     ///Tater tot side
     /// </summary>
-    public class Triceritots : Side, IMenuItem
+    public class Triceritots : Side, IMenuItem, INotifyPropertyChanged
     {
         private Size size;
         /// <summary>
@@ -22,6 +23,17 @@ namespace DinoDiner.Menu
             get
             {
                 return new List<string>() { "Potato", "Salt", "Vegetable Oil" };
+            }
+        }
+        /// <summary>
+        /// gets description of special instructions
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
             }
         }
         /// <summary>
@@ -37,18 +49,26 @@ namespace DinoDiner.Menu
                     case Size.Large:
                         Price = 1.95;
                         Calories = 590;
+                        NotifyOfPropertyChange("Special");
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Medium:
                         Price = 1.45;
                         Calories = 410;
+                        NotifyOfPropertyChange("Special");
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Small:
                         Price = .99;
                         Calories = 352;
+                        NotifyOfPropertyChange("Special");
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                     default:
                         Price = .99;
                         Calories = 352;
+                        NotifyOfPropertyChange("Special");
+                        NotifyOfPropertyChange("Ingredients");
                         break;
                 }
 
@@ -73,6 +93,19 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return Size + " Triceritots";
+        }
+        /// <summary>
+        /// The PropertyChanged event handler; notifies of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Helper function for property changed
+        /// </summary>
+        /// <param name="propertyname"></param>
+        protected void NotifyOfPropertyChange(string propertyname)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
     }
 }

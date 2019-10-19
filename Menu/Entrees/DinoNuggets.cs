@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Chicken Nugget Entree
     /// </summary>
-    public class DinoNuggets : Entree, IMenuItem
+    public class DinoNuggets : Entree, IMenuItem, INotifyPropertyChanged
     {
 
         private uint nuggetCount { get; set; }
@@ -32,6 +33,18 @@ namespace DinoDiner.Menu
             }
         }
         /// <summary>
+        /// gets description of special instructions
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (nuggetCount > 6) special.Add($"Add { nuggetCount - 6} extra Chicken Nuggets");
+                return special.ToArray();
+            }
+        }
+        /// <summary>
         /// Default constructor sets the price, calories,
         /// and Nugget count fields to their default settings.
         /// </summary>
@@ -49,6 +62,8 @@ namespace DinoDiner.Menu
             nuggetCount++;
             this.Calories += 59;
             this.Price += .25;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
         /// <summary>
         /// ToString override method
@@ -57,6 +72,19 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return "Dino-Nuggets";
+        }
+        /// <summary>
+        /// The PropertyChanged event handler; notifies of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Helper function for property changed
+        /// </summary>
+        /// <param name="propertyname"></param>
+        protected void NotifyOfPropertyChange(string propertyname)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
     }
 }
