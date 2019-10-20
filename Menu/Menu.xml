@@ -926,6 +926,31 @@
             Order Class
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Order.Items">
+            <summary>
+            Items added to the order
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.SubtotalCost">
+            <summary>
+            total price from prices of all order items
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.SalesTaxRate">
+            <summary>
+            sales tax
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.SalesTaxCost">
+            <summary>
+            amount of sales tax (SalesTaxRate * SubTotalCost)
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.TotalCost">
+            <summary>
+            Total Cost of the sale (SubtotalCost + SalesTaxCost)
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
             Side of Fries
