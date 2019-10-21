@@ -23,6 +23,11 @@ namespace DinoDiner.Menu
                 ObservableCollection<IOrderItem> items = new ObservableCollection<IOrderItem>();
                 return items;
             }
+            set
+            {
+                ObservableCollection<IOrderItem> item = new ObservableCollection<IOrderItem>();
+                item = value;
+            }
         }
         /// <summary>
         /// total price from prices of all order items

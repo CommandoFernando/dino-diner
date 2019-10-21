@@ -121,7 +121,7 @@ namespace DinoDiner.Menu
             get
             {
                 List<string> special = new List<string>();
-                if (Decaf) special.Add("Defac");
+                //if (Decaf) special.Add("Defac");
                 if (Ice) special.Add("Add Ice");
                 if (RoomForCream) special.Add("Leave room for cream");
                 return special.ToArray();
