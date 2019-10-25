@@ -38,7 +38,7 @@ namespace PointOfSale
         /// <param name="args">Default</param>
         private void SelectFlavor(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new FlavorSelection());
+            NavigationService.Navigate(new DrinkSelection());
         }
         /// <summary>
         /// Changes Page from Customize Combo to 

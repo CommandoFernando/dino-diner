@@ -951,6 +951,16 @@
             Total Cost of the sale (SubtotalCost + SalesTaxCost)
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Order.PropertyChanged">
+            <summary>
+            an event handler for property changed
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.#ctor">
+            <summary>
+            Constructor for order
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
             Side of Fries
