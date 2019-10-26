@@ -16,7 +16,10 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Order : INotifyPropertyChanged
     {
-        double salesTaxRate = 0;   
+        /// <summary>
+        /// Protected Sales tax rate variable
+        /// </summary>
+        protected double salesTaxRate = 0;   
         /// <summary>
         /// Items added to the order
         /// </summary>
@@ -82,6 +85,14 @@ namespace DinoDiner.Menu
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SubtotalCost"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SalesTaxCost"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalCost"));
+        }
+        /// <summary>
+        /// Add item to order
+        /// </summary>
+        /// <param name="item"></param>
+        public void Add(IOrderItem item)
+        {
+            item.PropertyChanged += OnCollectionChanged;
         }
     }
 }

@@ -32,6 +32,14 @@ namespace PointOfSale
             {
                 NavigationService?.Navigate(new SideSelection());
             }
+            else if (OrderItems.SelectedItem is Entree entree)
+            {
+                NavigationService?.Navigate(new EntreeSelection());
+            }
+            else if (OrderItems.SelectedItem is Drink drink)
+            {
+                NavigationService?.Navigate(new DrinkSelection());
+            }
         }
         public void OnRemoveItem(object sender, RoutedEventArgs args)
         {

@@ -26,7 +26,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="1" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Red">
+        <Button Name="BtnCherry" Click="SelectCherryFlavor" Grid.Row="1" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Red">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Cherry</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/Cherry.png" Stretch="Fill">
@@ -34,7 +34,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="1" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Yellow">
+        <Button Name="BtnLime" Click="SelectLimeFlavor" Grid.Row="1" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Yellow">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Lime</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/lime.png" Stretch="Fill">
@@ -42,7 +42,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="2" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="BlanchedAlmond">
+        <Button Name="BtnVanilla" Click="SelectVanillaFlavor" Grid.Row="2" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="BlanchedAlmond">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Vanilla</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/cola.png" Stretch="Fill">
@@ -50,7 +50,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="Brown">
+        <Button Name="BtnChocolate" Click="SelectChocolateFlavor" Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="Brown">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Chocolate</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/Orange.png" Stretch="Fill">
@@ -58,7 +58,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="2" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Orange">
+        <Button Name="BtnOrange" Click="SelectOrangeFlavor" Grid.Row="2" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Orange">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Orange</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/orange.png" Stretch="Fill">
@@ -66,7 +66,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="3" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
+        <Button Name="BtnCola" Click="SelectColaFlavor" Grid.Row="3" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Cola</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/Cola.png" Stretch="Fill">
@@ -74,7 +74,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="3" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="RosyBrown">
+        <Button Name="BtnRootBeer" Click="SelectRootBeerFlavor" Grid.Row="3" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="RosyBrown">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Root Bear</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/Orange.png" Stretch="Fill">

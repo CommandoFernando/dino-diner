@@ -37,5 +37,9 @@ namespace DinoDiner.Menu
         /// gets description of special instructions
         /// </summary>
         public abstract string[] Special { get; }
+        /// <summary>
+        /// Property Changed event handler
+        /// </summary>
+        public virtual event PropertyChangedEventHandler PropertyChanged;
     }
 }

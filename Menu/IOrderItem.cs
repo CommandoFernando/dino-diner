@@ -12,7 +12,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Iorder interface
     /// </summary>
-    public interface IOrderItem
+    public interface IOrderItem : INotifyPropertyChanged
     {
         /// <summary>
         /// Price

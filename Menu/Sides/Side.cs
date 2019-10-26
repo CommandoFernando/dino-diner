@@ -43,5 +43,10 @@ namespace DinoDiner.Menu
         /// gets description of special instructions
         /// </summary>
         public abstract string[] Special { get; }
+        /// <summary>
+        /// The PropertyChanged event handler; notifies of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public virtual event PropertyChangedEventHandler PropertyChanged;
     }
 }

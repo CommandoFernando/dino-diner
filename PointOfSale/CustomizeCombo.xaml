@@ -57,14 +57,14 @@
         </Button>
 
         <Button Grid.Row="1" Grid.Column="3"  FontSize="24" FontWeight="UltraBold" Foreground="Red" Click="SelectFlavor">
-            Flavor
+            Drink
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
                 </ImageBrush>
             </Button.Background>
         </Button>
         
-        <Label Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack">
+        <Label Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack">
             Add to Order
         </Label>
         <Label Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack">

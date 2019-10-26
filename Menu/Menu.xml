@@ -540,6 +540,11 @@
             gets description of special instructions
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Entree.PropertyChanged">
+            <summary>
+            Property Changed event handler
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.PrehistoricPBJ">
             <summary>
             PBJ entree class
@@ -926,6 +931,11 @@
             Order Class
             </summary>
         </member>
+        <member name="F:DinoDiner.Menu.Order.salesTaxRate">
+            <summary>
+            Protected Sales tax rate variable
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Order.Items">
             <summary>
             Items added to the order
@@ -960,6 +970,12 @@
             <summary>
             Constructor for order
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.Add(DinoDiner.Menu.IOrderItem)">
+            <summary>
+            Add item to order
+            </summary>
+            <param name="item"></param>
         </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
@@ -1123,6 +1139,12 @@
         <member name="P:DinoDiner.Menu.Side.Special">
             <summary>
             gets description of special instructions
+            </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.Side.PropertyChanged">
+            <summary>
+            The PropertyChanged event handler; notifies of changes to the Price, Description, and
+            Special properties
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Triceritots">

@@ -58,7 +58,7 @@
             </Button.Background>
         </Button>
 
-        <Button Click="OnSelectSmall" Grid.Row="1" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
+        <Button Name="BtnSelectSmall" Click="OnSelectSmall" Grid.Row="1" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Small</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
@@ -66,7 +66,7 @@
             </Button.Background>
         </Button>
         
-        <Button Click="OnSelectMedium" Grid.Row="2" Grid.Column="5"  FontSize="24" FontWeight="UltraBold" Foreground="Black">
+        <Button Name="BtnSelectMedium" Click="OnSelectMedium" Grid.Row="2" Grid.Column="5"  FontSize="24" FontWeight="UltraBold" Foreground="Black">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Medium</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
@@ -74,7 +74,7 @@
             </Button.Background>
         </Button>
 
-        <Button Click="OnSelectLarge" Grid.Row="3" Grid.Column="5"  FontSize="34" FontWeight="UltraBold" Foreground="Black">
+        <Button Name="BtnSelectLarge" Click="OnSelectLarge" Grid.Row="3" Grid.Column="5"  FontSize="34" FontWeight="UltraBold" Foreground="Black">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Large</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">

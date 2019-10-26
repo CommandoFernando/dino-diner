@@ -26,7 +26,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="1" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
+        <Button Name="BtnAddBrontowurst" Click="AddBrontowurst" Grid.Row="1" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Brontowurst</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-01.png" Stretch="Fill">
@@ -34,7 +34,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="1" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
+        <Button Name="BtnAddDinoNuggets" Click="AddDinoNuggets" Grid.Row="1" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Dino-Nuggets</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-02.png" Stretch="Fill">
@@ -42,7 +42,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="2" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
+        <Button Name="BtnAddPrehistoricPBJ" Click="AddPrehistoricPBJ" Grid.Row="2" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">PreHistoric PB&amp;J</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-03.png" Stretch="Fill">
@@ -50,7 +50,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
+        <Button Name="BtnAddPterodactylWings" Click="AddPterodactylWings"  Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Pterodactyl Wings</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-04.png" Stretch="Fill">
@@ -58,7 +58,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="2" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
+        <Button Name="BtnAddSteakosaurusBurger" Click="AddSteakosaurusBurger" Grid.Row="2" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Steakosaurus Burger</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-05.png" Stretch="Fill">
@@ -66,7 +66,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="3" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
+        <Button Name="TRexKingBurger" Grid.Row="3" Click="AddTRexKingBurger" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">T-Rex Kingburger</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-06.png" Stretch="Fill">
@@ -74,7 +74,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Row="3" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
+        <Button Name="VelociWrap" Grid.Row="3" Click="AddVelociWrap" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Veloci-Wrap</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-07.png" Stretch="Fill">
