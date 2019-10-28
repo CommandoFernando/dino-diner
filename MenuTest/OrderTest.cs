@@ -13,7 +13,7 @@ namespace MenuTest
         public void OrderShouldHaveTheCorrectCost()
         {
             Order order = new Order();
-            order.Items.Add(new SteakosaurusBurger());
+            order.Add(new SteakosaurusBurger());
             Assert.Equal(0, order.TotalCost);
         }
         [Fact]

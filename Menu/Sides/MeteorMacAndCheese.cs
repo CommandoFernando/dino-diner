@@ -50,26 +50,26 @@ namespace DinoDiner.Menu
                     case Size.Large:
                         Price = 1.95;
                         Calories = 520;
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
+                        NotifyOfPropertyChange("Price");
+                        NotifyOfPropertyChange("Description");
                         break;
                     case Size.Medium:
                         Price = 1.45;
                         Calories = 490;
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
+                        NotifyOfPropertyChange("Price");
+                        NotifyOfPropertyChange("Description");
                         break;
                     case Size.Small:
                         Price = .99;
                         Calories = 420;
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
+                        NotifyOfPropertyChange("Price");
+                        NotifyOfPropertyChange("Description");
                         break;
                     default:
                         Price = .99;
                         Calories = 420;
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
+                        NotifyOfPropertyChange("Price");
+                        NotifyOfPropertyChange("Description");
                         break;
                 }
 

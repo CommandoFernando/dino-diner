@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Abstract side class
     /// </summary>
-    public abstract class Side: IMenuItem, IOrderItem
+    public abstract class Side: IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Gets and sets the price
@@ -48,5 +48,9 @@ namespace DinoDiner.Menu
         /// Special properties
         /// </summary>
         public virtual event PropertyChangedEventHandler PropertyChanged;
+        protected void NotifyOfPropertyChange(string propertyname)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
+        }
     }
 }

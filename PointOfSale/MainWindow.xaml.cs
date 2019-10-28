@@ -30,21 +30,26 @@ namespace PointOfSale
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new Order();
             OrderList.NavigationService = OrderUI.NavigationService;
+
         }
         public void OnLoadCompleted(object sender, NavigationEventArgs args)
         {
             SetFrameDataContext();
         }
-        public void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs arfs)
+        public void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs args)
         {
             SetFrameDataContext();
         }
         private void SetFrameDataContext()
         {
-            FrameworkElement content = OrderUI.Content as FrameworkElement;
-            if (content == null) return;
-            content.DataContext = OrderUI.DataContext;
+            //FrameworkElement content = OrderUI.Content as FrameworkElement;
+            if (OrderUI.Content is Page page)
+            {
+                page.DataContext = OrderUI.DataContext;
+            }
+            //content.DataContext = OrderUI.DataContext;
         }
         private void BindDataContextToPage()
         {

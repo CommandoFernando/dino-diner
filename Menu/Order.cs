@@ -23,7 +23,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Items added to the order
         /// </summary>
-        public ObservableCollection<IOrderItem> Items { get; set; } = new ObservableCollection<IOrderItem>();
+        public ObservableCollection<IOrderItem> Items { get; protected set; } //= new ObservableCollection<IOrderItem>();
         
         /// <summary>
         /// total price from prices of all order items
@@ -85,6 +85,7 @@ namespace DinoDiner.Menu
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SubtotalCost"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SalesTaxCost"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalCost"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Item"));
         }
         /// <summary>
         /// Add item to order
@@ -93,6 +94,8 @@ namespace DinoDiner.Menu
         public void Add(IOrderItem item)
         {
             item.PropertyChanged += OnCollectionChanged;
+            Items.Add(item);
+            OnCollectionChanged(this, new EventArgs());
         }
     }
 }

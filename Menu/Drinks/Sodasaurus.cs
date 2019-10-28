@@ -25,8 +25,7 @@ namespace DinoDiner.Menu
             set
             {
                 flavor = value;
-                NotifyOfPropertyChange("Special");
-                NotifyOfPropertyChange("Ingredients");
+                NotifyOfPropertyChange("Description");
             }
         }
         private Size size;
