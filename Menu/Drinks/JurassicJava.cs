@@ -66,28 +66,24 @@ namespace DinoDiner.Menu
                     case Size.Large:
                         Price = 1.49;
                         Calories = 8;
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Medium:
                         Price = .99;
                         Calories = 4;
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Small:
                         Price = .59;
                         Calories = 2;
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                     default:
                         Price = .59;
                         Calories = 2;
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                 }
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Ingredients");
             }
             get
             {
@@ -101,7 +97,7 @@ namespace DinoDiner.Menu
         {
             get
             {
-                return new List<string>() { "Coffee", "Water",};
+                return new List<string>() { "Coffee", "Water", };
             }
         }
         /// <summary>

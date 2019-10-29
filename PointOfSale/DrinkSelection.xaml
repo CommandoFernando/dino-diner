@@ -58,7 +58,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnSmall" Grid.Row="2" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Yellow" Height="70">
+        <Button Name="BtnSmall" Click="OnSelectSmall" Grid.Row="2" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Yellow" Height="70">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Small</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-13.png" Stretch="None">
@@ -66,7 +66,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnMedium" Grid.Row="3" Grid.Column="2"  FontSize="24" FontWeight="UltraBold" Foreground="Crimson" Height="80">
+        <Button Name="BtnMedium" Click="OnSelectMedium" Grid.Row="3" Grid.Column="2"  FontSize="24" FontWeight="UltraBold" Foreground="Crimson" Height="80">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Medium</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-14.png" Stretch="None">
@@ -74,15 +74,15 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnLarge" Grid.Row="4" Grid.Column="2"  FontSize="32" FontWeight="UltraBold" Foreground="Brown" Height="90">
+        <Button Name="BtnLarge" Click="OnSelectLarge" Grid.Row="4" Grid.Column="2"  FontSize="32" FontWeight="UltraBold" Foreground="Brown" Height="90">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Large</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="None">
                 </ImageBrush>
             </Button.Background>
         </Button>
-        <Button Name="BtnSpecial" Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Sweet /Decaf /Flavor</TextBlock>
+        <Button Name="BtnSpecial" Click="OnSpecial" Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Sweet/Decaf/Flavor"/>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-13.png" Stretch="Fill">
                 </ImageBrush>

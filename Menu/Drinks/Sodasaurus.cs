@@ -17,7 +17,8 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Soda flavor
         /// </summary>
-        public SodasaurusFlavor Flavor {
+        public SodasaurusFlavor Flavor
+        {
             get
             {
                 return flavor;
@@ -26,6 +27,7 @@ namespace DinoDiner.Menu
             {
                 flavor = value;
                 NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Ingredients");
             }
         }
         private Size size;
@@ -51,24 +53,24 @@ namespace DinoDiner.Menu
                     case Size.Large:
                         Price = 2.50;
                         Calories = 208;
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Medium:
                         Price = 2.00;
                         Calories = 156;
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Small:
                         Price = 1.50;
                         Calories = 112;
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                     default:
                         Price = 1.50;
                         Calories = 112;
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                 }
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Ingredients");
             }
             get
             {

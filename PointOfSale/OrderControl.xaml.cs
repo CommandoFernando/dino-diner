@@ -30,15 +30,15 @@ namespace PointOfSale
         {
             if (OrderItems.SelectedItem is Side side)
             {
-                NavigationService?.Navigate(new SideSelection());
+                NavigationService?.Navigate(new SideSelection(side));
             }
             else if (OrderItems.SelectedItem is Entree entree)
             {
-                NavigationService?.Navigate(new EntreeSelection());
+                NavigationService?.Navigate(new EntreeSelection(entree));
             }
             else if (OrderItems.SelectedItem is Drink drink)
             {
-                NavigationService?.Navigate(new DrinkSelection());
+                NavigationService?.Navigate(new DrinkSelection(drink));
             }
         }
         public void OnRemoveItem(object sender, RoutedEventArgs args)
@@ -47,7 +47,7 @@ namespace PointOfSale
             {
                 if(sender is FrameworkElement element)
                 if(element.DataContext is IOrderItem item)
-                order.Items.Remove(item);                
+                order.Remove(item);                
             }
         }
     }

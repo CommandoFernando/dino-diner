@@ -51,8 +51,6 @@ namespace DinoDiner.Menu
                             Calories = 64;
                         }
                         else { Calories = 32; }
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Medium:
                         Price = 1.49;
@@ -61,8 +59,6 @@ namespace DinoDiner.Menu
                             Calories = 32;
                         }
                         else { Calories = 16; }
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                     case Size.Small:
                         Price = .99;
@@ -71,10 +67,12 @@ namespace DinoDiner.Menu
                             Calories = 16;
                         }
                         else { Calories = 8; }
-                        NotifyOfPropertyChange("Special");
-                        NotifyOfPropertyChange("Ingredients");
                         break;
                 }
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Ingredients");
             }
             get
             {

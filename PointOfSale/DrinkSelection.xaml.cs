@@ -42,7 +42,7 @@ namespace PointOfSale
         public DrinkSelection(Drink drink)
         {
             InitializeComponent();
-            Drink = drink;
+            this.Drink = drink;
         }
         /// <summary>
         /// Method for done button
@@ -62,7 +62,8 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(new JurassicJava());
+                this.Drink = new JurassicJava();
+                order.Add(this.Drink);
             }
         }
         /// <summary>
@@ -74,8 +75,11 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(new Sodasaurus());
+                Sodasaurus soda = new Sodasaurus();
+                this.Drink = soda;               
+                order.Add(this.Drink);
             }
+
         }
         /// <summary>
         /// Method for adding tyrannotea
@@ -86,7 +90,9 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(new Tyrannotea());
+                this.Drink = new Tyrannotea();
+                order.Add(this.Drink);
+
             }
         }
         /// <summary>
@@ -98,8 +104,69 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(new Water());
+                this.Drink = new Water();
+                order.Add(this.Drink);
             }
         }
+        /// <summary>
+        /// Helper Method for selecting the size
+        /// </summary>
+        /// <param name="size">the size that you want</param>
+        public void SelectSize(DinoDiner.Menu.Size size)
+        {
+            if (this.Drink != null)
+            {
+                this.Drink.Size = size;
+            }
+            //NavigationService?.Navigate(new MenuCategorySelection());
+        }
+        /// <summary>
+        /// Method for selecting large side
+        /// </summary>
+        /// <param name="sender">default</param>
+        /// <param name="args">default</param>
+        protected void OnSelectLarge(object sender, RoutedEventArgs args)
+        {
+            SelectSize(DinoDiner.Menu.Size.Large);
+        }
+        /// <summary>
+        /// Method for selecting medium side
+        /// </summary>
+        /// <param name="sender">default</param>
+        /// <param name="args">default</param>
+        protected void OnSelectMedium(object sender, RoutedEventArgs args)
+        {
+            SelectSize(DinoDiner.Menu.Size.Medium);
+        }
+        /// <summary>
+        /// method for selecting small size side
+        /// </summary>
+        /// <param name="sender">default</param>
+        /// <param name="args">default</param>
+        protected void OnSelectSmall(object sender, RoutedEventArgs args)
+        {
+            SelectSize(DinoDiner.Menu.Size.Small);
+        }
+        public void OnSpecial(object sender, RoutedEventArgs args)
+        {
+            if (this.Drink is JurassicJava)
+            {
+      
+            }
+            if(this.Drink == new Tyrannotea())
+            {
+
+            }
+            if(this.Drink is Sodasaurus)
+            {
+                NavigationService?.Navigate(new FlavorSelection(this.Drink as Sodasaurus));
+            }
+            if(this.Drink is Water)
+            {
+                BtnSpecial.IsEnabled = false;
+               // NavigationService?.Navigate(new DrinkSelection());
+            }
+        }
+
     }
 }

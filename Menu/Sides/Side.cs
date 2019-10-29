@@ -48,6 +48,10 @@ namespace DinoDiner.Menu
         /// Special properties
         /// </summary>
         public virtual event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Notify property change method
+        /// </summary>
+        /// <param name="propertyname"></param>
         protected void NotifyOfPropertyChange(string propertyname)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));

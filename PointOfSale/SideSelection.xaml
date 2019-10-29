@@ -10,13 +10,14 @@
 
     <Grid Background="SaddleBrown">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="154*"/>
+            <ColumnDefinition Width="154*"/>
+            <ColumnDefinition Width="154*"/>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="154*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="4*"/>
@@ -26,7 +27,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Button Name="BtnAddFryceritops" Click="AddFryceritops" Grid.Row="1" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="DarkOrange">
+        <Button Name="BtnAddFryceritops" Click="AddFryceritops" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="DarkOrange" Grid.ColumnSpan="2" Margin="153.667,51,0.333,0" Grid.RowSpan="2">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Fryceritops</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
@@ -34,7 +35,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnAddMeteorMacAndCheese" Click="AddMeteorMacAndCheese" Grid.Row="2" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="Yellow">
+        <Button Name="BtnAddMeteorMacAndCheese" Click="AddMeteorMacAndCheese" Grid.Row="2"  FontSize="18" FontWeight="UltraBold" Foreground="Yellow" Grid.ColumnSpan="2" Margin="15,0,0.333,128.333" Grid.RowSpan="2">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Bottom">Meteor Mac &amp; Cheese</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-09.png" Stretch="Fill">
@@ -42,7 +43,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnAddMezzorellaSticks" Click="AddMezzorellaSticks" Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="LightGoldenrodYellow">
+        <Button Name="BtnAddMezzorellaSticks" Click="AddMezzorellaSticks" Grid.Row="2" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="LightGoldenrodYellow" Grid.ColumnSpan="2" Margin="153.667,0,0.333,128.333" Grid.RowSpan="2">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Mezzorella Sticks</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-10.png" Stretch="Fill">
@@ -50,7 +51,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnAddTriceritots" Click="AddTriceritots" Grid.Row="3" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Brown">
+        <Button Name="BtnAddTriceritots" Click="AddTriceritots" Grid.Row="3" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="Brown" Grid.ColumnSpan="2" Margin="153.667,0.333,0.333,0.333">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Triceritots</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-11.png" Stretch="Fill">
@@ -58,15 +59,15 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnSelectSmall" Click="OnSelectSmall" Grid.Row="1" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
+        <Button Name="BtnSelectSmall" Click="OnSelectSmall" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Black" Grid.ColumnSpan="2" Margin="0.333,51,15,0" Grid.RowSpan="2">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Small</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
                 </ImageBrush>
             </Button.Background>
         </Button>
-        
-        <Button Name="BtnSelectMedium" Click="OnSelectMedium" Grid.Row="2" Grid.Column="5"  FontSize="24" FontWeight="UltraBold" Foreground="Black">
+
+        <Button Name="BtnSelectMedium" Click="OnSelectMedium" Grid.Row="2" Grid.Column="5"  FontSize="24" FontWeight="UltraBold" Foreground="Black" Grid.ColumnSpan="2" Margin="0.333,0,15,128.333" Grid.RowSpan="2">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Medium</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
@@ -74,27 +75,27 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnSelectLarge" Click="OnSelectLarge" Grid.Row="3" Grid.Column="5"  FontSize="34" FontWeight="UltraBold" Foreground="Black">
+        <Button Name="BtnSelectLarge" Click="OnSelectLarge" Grid.Row="3" Grid.Column="5"  FontSize="34" FontWeight="UltraBold" Foreground="Black" Grid.ColumnSpan="2" Margin="0.333,0.333,15,0.333">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Large</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
                 </ImageBrush>
             </Button.Background>
         </Button>
-        <ContentControl Content="{Binding Path=Items}">
+        <ContentControl Content="{Binding Path=Items}" Margin="0,0,0.333,0.333">
             <ContentControl.ContentTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding}"/>
-            </DataTemplate>
+                </DataTemplate>
             </ContentControl.ContentTemplate>
         </ContentControl>
-        <TextBlock Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap">
+        <TextBlock Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap" Margin="36.667,32,36.333,32.667">
             Add to Order
         </TextBlock>
-        <TextBlock Grid.Row="0" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap">
+        <TextBlock Grid.Row="0" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap" Margin="53.333,10,53.667,9.333">
             Size
         </TextBlock>
-        <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap">
+        <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" TextWrapping="Wrap" Margin="51.667,10,52.333,9.333">
             Side
         </TextBlock>
     </Grid>

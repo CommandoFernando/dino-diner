@@ -43,7 +43,7 @@ namespace PointOfSale
         {
             this.side = new Fryceritops();
             Order order = (Order)DataContext;
-            order.Add(new Fryceritops());
+            order.Add(this.side);
             //BtnAddFryceritops.IsEnabled = false;
             //BtnAddMeteorMacAndCheese.IsEnabled = false;
         }
@@ -57,7 +57,7 @@ namespace PointOfSale
             this.side = new MeteorMacAndCheese();
             if(DataContext is Order order)
             {
-                order.Add(new MeteorMacAndCheese());
+                order.Add(this.side);
             }
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace PointOfSale
         {
             this.side = new MezzorellaSticks();
             Order order = (Order)DataContext;
-            order.Add(new MezzorellaSticks());
+            order.Add(this.side);
         }
         /// <summary>
         /// method for adding triceritots to order
@@ -80,7 +80,7 @@ namespace PointOfSale
         {
             this.side = new Triceritots();
             Order order = (Order)DataContext;
-            order.Add(new Triceritots());
+            order.Add(this.side);
         }
         /// <summary>
         /// Side selection method
@@ -90,8 +90,8 @@ namespace PointOfSale
         {
             if(DataContext is Order order)
             {
-                order.Add(side);
                 this.side = side;
+                order.Add(side);
             }
         }
         /// <summary>
@@ -100,11 +100,11 @@ namespace PointOfSale
         /// <param name="size">the size that you want</param>
         public void SelectSize(DinoDiner.Menu.Size size)
         {
-            if(side != null)
+            if(this.side != null)
             {
                 this.side.Size = size;
             }
-            //NavigationService?.Navigate(new MenuCategorySelection());
+            NavigationService?.Navigate(new MenuCategorySelection());
         }
         /// <summary>
         /// Method for selecting large side
@@ -114,7 +114,6 @@ namespace PointOfSale
         protected void OnSelectLarge(object sender, RoutedEventArgs args)
         {
             SelectSize(DinoDiner.Menu.Size.Large);
-            //NavigationService.Navigate(new MenuCategorySelection());
         }
         /// <summary>
         /// Method for selecting medium side
@@ -124,7 +123,6 @@ namespace PointOfSale
         protected void OnSelectMedium(object sender, RoutedEventArgs args)
         {
             SelectSize(DinoDiner.Menu.Size.Medium);
-            //NavigationService.Navigate(new MenuCategorySelection());
         }
         /// <summary>
         /// method for selecting small size side
@@ -134,7 +132,6 @@ namespace PointOfSale
         protected void OnSelectSmall(object sender, RoutedEventArgs args)
         {
             SelectSize(DinoDiner.Menu.Size.Small);
-           // NavigationService.Navigate(new MenuCategorySelection());
         }
     }
 }

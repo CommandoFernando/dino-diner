@@ -963,7 +963,7 @@
         </member>
         <member name="E:DinoDiner.Menu.Order.PropertyChanged">
             <summary>
-            an event handler for property changed
+            an event handler for property changed, notifies when an order property changes
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Order.#ctor">
@@ -976,6 +976,17 @@
             Add item to order
             </summary>
             <param name="item"></param>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.Remove(DinoDiner.Menu.IOrderItem)">
+            <summary>
+            Method for removing item from order
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.NotifyAllPropertiesChanged">
+            <summary>
+            helper function for INotifyPropertyChanged
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
@@ -1146,6 +1157,12 @@
             The PropertyChanged event handler; notifies of changes to the Price, Description, and
             Special properties
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Side.NotifyOfPropertyChange(System.String)">
+            <summary>
+            Notify property change method
+            </summary>
+            <param name="propertyname"></param>
         </member>
         <member name="T:DinoDiner.Menu.Triceritots">
              <summary>
