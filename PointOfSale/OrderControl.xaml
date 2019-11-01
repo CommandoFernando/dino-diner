@@ -17,7 +17,7 @@
         <ListBox Grid.Row="1"
                  Name="OrderItems"
                  SelectionChanged="OnSelectionChanged"
-                 IsSynchronizedWithCurrentItem="True"
+                 IsSynchronizedWithCurrentItem="False"
                  ItemsSource="{Binding Path=Items}">
             <ListBox.ItemTemplate>
                 <DataTemplate>

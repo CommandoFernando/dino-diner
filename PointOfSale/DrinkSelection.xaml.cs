@@ -167,6 +167,7 @@ namespace PointOfSale
                // NavigationService?.Navigate(new DrinkSelection());
             }
         }
+     //   public void OnHold
 
     }
 }
