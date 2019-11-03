@@ -50,10 +50,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                this.Entree = new Brontowurst();
-                order.Add(this.Entree);
+                Brontowurst dog = new Brontowurst();
+                order.Add(dog);
+                NavigationService?.Navigate(new CustomizeBrontowurst(dog));
             }
-            NavigationService?.Navigate(new MenuCategorySelection());
         }
         /// <summary>
         /// Method for adding DinoNuggets to order
@@ -64,10 +64,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                this.Entree = new DinoNuggets();
-                order.Add(this.Entree);
+                DinoNuggets dn = new DinoNuggets();
+                order.Add(dn);
+                NavigationService?.Navigate(new CustomizeDinoNuggets(dn));
             }
-            NavigationService?.Navigate(new MenuCategorySelection());
         }
         /// <summary>
         /// Method for adding pbj to order
@@ -106,10 +106,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                this.Entree = new SteakosaurusBurger();
-                order.Add(this.Entree);
+                SteakosaurusBurger sb = new SteakosaurusBurger();
+                order.Add(sb);
+                NavigationService?.Navigate(new CustomizeSteakosaurusBurger(sb));
             }
-            NavigationService?.Navigate(new MenuCategorySelection());
         }
         /// <summary>
         /// Method for adding King Burger to order
@@ -120,10 +120,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                this.Entree = new TRexKingBurger();
-                order.Add(this.Entree);
+                TRexKingBurger kb = new TRexKingBurger();
+                order.Add(kb);
+                NavigationService?.Navigate(new CustomizeTRexKingBurger(kb));
             }
-            NavigationService?.Navigate(new MenuCategorySelection());
         }
         /// <summary>
         /// method for adding Wrap to order
@@ -134,10 +134,10 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                this.Entree = new VelociWrap();
-                order.Add(this.Entree);
+                VelociWrap vw = new VelociWrap();
+                order.Add(vw);
+                NavigationService?.Navigate(new CustomizeVelociWrap(vw));
             }
-            NavigationService?.Navigate(new MenuCategorySelection());
         }
     }
 }

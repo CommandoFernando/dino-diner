@@ -44,6 +44,11 @@
             Combo Ingredient list
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor">
+            <summary>
+            Combo constructor with no parameters
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entree)">
             <summary>
             Combo constructor Sets Entree to entree and initializes Side and Drink to default Value
@@ -339,6 +344,11 @@
         <member name="M:DinoDiner.Menu.Tyrannotea.AddLemon">
             <summary>
             Method for adding lemon to tea
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.MakeSweet">
+            <summary>
+            M
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Tyrannotea.ToString">

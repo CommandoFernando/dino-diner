@@ -12,7 +12,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Combo Class
     /// </summary>
-    public class CretaceousCombo : IMenuItem, INotifyPropertyChanged
+    public class CretaceousCombo : IMenuItem, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// The Calories of the Item (uint)
@@ -27,18 +27,66 @@ namespace DinoDiner.Menu
                 Calories = value;
             }
         }
+        private Entree entree;
+        private Drink drink;
+        private Side side;
         /// <summary>
         /// Entree object for combo
         /// </summary>
-        public Entree Entree { get; set; }
+        public Entree Entree
+        {
+            get
+            {
+                return entree;
+            }
+            set
+            {
+                this.entree = value;
+                NotifyOfPropertyChange("Special");
+                NotifyOfPropertyChange("Ingredients");
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Price");
+            }
+        }
         /// <summary>
         /// Drink Object for combo
         /// </summary>
-        public Drink Drink { get; set; }
+        public Drink Drink
+        {
+            get
+            {
+                return drink;
+            }
+            set
+            {
+                this.drink = value;
+                NotifyOfPropertyChange("Special");
+                NotifyOfPropertyChange("Ingredients");
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Price");
+            }
+        }
         /// <summary>
         /// Side object for combo
         /// </summary>
-        public Side Side { get; set; }
+        public Side Side
+        {
+            get
+            {
+                return side;
+            }
+            set
+            {
+                this.side = value;
+                NotifyOfPropertyChange("Special");
+                NotifyOfPropertyChange("Ingredients");
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Price");
+            }
+        }
 
         private Size size = Size.Small;
         /// <summary>
@@ -54,6 +102,9 @@ namespace DinoDiner.Menu
                 this.Side.Size = value;
                 NotifyOfPropertyChange("Special");
                 NotifyOfPropertyChange("Ingredients");
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Price");
             }
         }
         /// <summary>
@@ -79,16 +130,19 @@ namespace DinoDiner.Menu
                 return ingredients;
             }
         }
-        private CretaceousCombo() { }
+        /// <summary>
+        /// Combo constructor with no parameters
+        /// </summary>
+        public CretaceousCombo() { }
         /// <summary>
         /// Combo constructor Sets Entree to entree and initializes Side and Drink to default Value
         /// </summary>
         /// <param name="entree"></param>
         public CretaceousCombo(Entree entree)
         {
-            Entree = entree;
-            Side = new Fryceritops();
-            Drink = new Sodasaurus();
+            this.Entree = entree;
+            this.Side = new Fryceritops();
+            this.Drink = new Sodasaurus();
         }
         /// <summary>
         /// To string method

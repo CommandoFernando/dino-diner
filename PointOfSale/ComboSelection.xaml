@@ -26,7 +26,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Button Name="BtnBrontoCombo"  Grid.Row="1" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Green" Click="CustomizeCombo">
+        <Button Name="BtnBrontoCombo" Click="OnSelectBrontowurstCombo" Grid.Row="1" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Brontowurst Combo</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-16.png" Stretch="Fill">
@@ -34,7 +34,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnDinoNuggetCombo" Grid.Row="1" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Green" Click="CustomizeCombo">
+        <Button Name="BtnDinoNuggetCombo" Click="OnSelectDinoNuggetCombo"  Grid.Row="1" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Dino-Nuggets Combo</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-17.png" Stretch="Fill">
@@ -42,7 +42,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnPBJCombo" Grid.Row="2" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="Green"  Click="CustomizeCombo">
+        <Button Name="BtnPBJCombo" Click="OnSelectPrehistoricPBJCombo" Grid.Row="2" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">PreHistoric PB&amp;J Combo</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-18.png" Stretch="Fill">
@@ -50,7 +50,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnPterodactylWingCombo" Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="Black" Click="CustomizeCombo">
+        <Button Name="BtnPterodactylWingCombo" Click="OnSelectPterodactylWings" Grid.Row="2" Grid.Column="3"  FontSize="18" FontWeight="UltraBold" Foreground="Black">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Pterodactyl Wings Combo</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-19.png" Stretch="Fill">
@@ -58,7 +58,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnSteakosaurusBurgerCombo" Grid.Row="2" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Green" Click="CustomizeCombo">
+        <Button Name="BtnSteakosaurusBurgerCombo" Click="OnSelectSteakosaurusBurger" Grid.Row="2" Grid.Column="5"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Steakosaurus Burger Combo</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-20.png" Stretch="Fill">
@@ -66,7 +66,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnTrexKingBurgerCombo" Grid.Row="3" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Green" Click="CustomizeCombo">
+        <Button Name="BtnTrexKingBurgerCombo" Click="OnSelectTRexKingBurger" Grid.Row="3" Grid.Column="2"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">T-Rex Kingburger Combo</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-21.png" Stretch="Fill">
@@ -74,7 +74,7 @@
             </Button.Background>
         </Button>
 
-        <Button Name="BtnVelociWrapCombo" Grid.Row="3" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Green" Click="CustomizeCombo">
+        <Button Name="BtnVelociWrapCombo" Click="OnSelectVelociWrap" Grid.Row="3" Grid.Column="4"  FontSize="18" FontWeight="UltraBold" Foreground="Green">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Veloci-Wrap Combo</TextBlock>
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-22.png" Stretch="Fill">

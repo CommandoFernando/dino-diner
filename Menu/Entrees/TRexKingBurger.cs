@@ -12,7 +12,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// King burger Entree
     /// </summary>
-    public class TRexKingBurger :Entree, IMenuItem, INotifyPropertyChanged
+    public class TRexKingBurger : Entree, IMenuItem, INotifyPropertyChanged
     {
         private bool bun = true;
         private bool lettuce = true;

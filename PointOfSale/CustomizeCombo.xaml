@@ -23,40 +23,29 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-
-        <Button Grid.Row="1" Grid.Column="1"  FontSize="24" FontWeight="UltraBold" Foreground="Black" Click="SelectSide">
+        <Button Grid.Row="2" Grid.Column="1"  FontSize="24" FontWeight="UltraBold" Foreground="Red" Click="OnCustomizeEntree">
+            Customize Entree
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-06.png" Stretch="UniformToFill">
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        
+        <Button Grid.Row="2" Grid.Column="2"  FontSize="24" FontWeight="UltraBold" Foreground="Black" Click="SelectSide">
             Side
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-08.png" Stretch="Fill">
                 </ImageBrush>
             </Button.Background>
         </Button>
-        
-        <Button Grid.Row="3" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="WhiteSmoke">
-            Small
-            <Button.Background>
-                <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
-                </ImageBrush>
-            </Button.Background>
-        </Button>
-        
-        <Button Grid.Row="3" Grid.Column="2"  FontSize="26" FontWeight="UltraBold" Foreground="White">
-            Medium
-            <Button.Background>
-                <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
-                </ImageBrush>
-            </Button.Background>
-        </Button>
-        
-        <Button Grid.Row="3" Grid.Column="3"  FontSize="34" FontWeight="UltraBold" Foreground="White">
-            Large
-            <Button.Background>
-                <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
-                </ImageBrush>
-            </Button.Background>
-        </Button>
 
-        <Button Grid.Row="1" Grid.Column="3"  FontSize="24" FontWeight="UltraBold" Foreground="Red" Click="SelectFlavor">
+        <Button Grid.Row="3" Grid.Column="1"  FontSize="18" FontWeight="UltraBold" Foreground="Black">Small</Button>
+
+        <Button Grid.Row="3" Grid.Column="2"  FontSize="26" FontWeight="UltraBold" Foreground="Black">Medium</Button>
+
+        <Button Grid.Row="3" Grid.Column="3"  FontSize="34" FontWeight="UltraBold" Foreground="Black">Large</Button>
+
+        <Button Grid.Row="2" Grid.Column="3"  FontSize="24" FontWeight="UltraBold" Foreground="Red" Click="OnSelectDrink">
             Drink
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-12.png" Stretch="UniformToFill">
@@ -64,11 +53,13 @@
             </Button.Background>
         </Button>
         
-        <Label Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack">
+        <Label Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack">
             Add to Order
         </Label>
-        <Label Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack">
+        
+        <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="UltraBlack" >
             Customize Combo
         </Label>
+        
     </Grid>
 </Page>

@@ -6,6 +6,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
+using DinoDiner;
 
 namespace PointOfSale
 {
@@ -18,6 +19,7 @@ namespace PointOfSale
         /// Backing field for side
         /// </summary>
         private Side side;
+        private CretaceousCombo combo = new CretaceousCombo();
         /// <summary>
         /// Side selection default Constructor
         /// </summary>
@@ -34,6 +36,11 @@ namespace PointOfSale
             InitializeComponent();
             this.side = side;
         }
+        public SideSelection(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.combo = combo;
+        }
         /// <summary>
         /// Method for adding fryceritops to order
         /// </summary>
@@ -41,6 +48,7 @@ namespace PointOfSale
         /// <param name="args">default args</param>
         public void AddFryceritops(object sender, RoutedEventArgs args)
         {
+            combo.Side = new Fryceritops();
             this.side = new Fryceritops();
             Order order = (Order)DataContext;
             order.Add(this.side);
@@ -54,6 +62,7 @@ namespace PointOfSale
         /// <param name="args">default args</param>
         public void AddMeteorMacAndCheese(object sender, RoutedEventArgs args)
         {
+            combo.Side = new MeteorMacAndCheese();
             this.side = new MeteorMacAndCheese();
             if(DataContext is Order order)
             {
@@ -67,6 +76,7 @@ namespace PointOfSale
         /// <param name="args">default</param>
         public void AddMezzorellaSticks(object sender, RoutedEventArgs args)
         {
+            combo.Side = new MezzorellaSticks();
             this.side = new MezzorellaSticks();
             Order order = (Order)DataContext;
             order.Add(this.side);
@@ -78,6 +88,7 @@ namespace PointOfSale
         /// <param name="args">default</param>
         public void AddTriceritots(object sender, RoutedEventArgs args)
         {
+            combo.Side = new Triceritots();
             this.side = new Triceritots();
             Order order = (Order)DataContext;
             order.Add(this.side);

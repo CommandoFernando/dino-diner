@@ -24,6 +24,7 @@ namespace PointOfSale
     /// </summary>
     public partial class DrinkSelection : Page
     {
+        private CretaceousCombo combo = new CretaceousCombo();
         /// <summary>
         /// Backing field for Drink
         /// </summary>
@@ -44,6 +45,11 @@ namespace PointOfSale
             InitializeComponent();
             this.Drink = drink;
         }
+        public DrinkSelection(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.combo = combo;
+        }
         /// <summary>
         /// Method for done button
         /// </summary>
@@ -62,6 +68,7 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
+                combo.Drink = new JurassicJava();
                 this.Drink = new JurassicJava();
                 order.Add(this.Drink);
             }
@@ -75,6 +82,7 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
+                combo.Drink = new Sodasaurus();
                 Sodasaurus soda = new Sodasaurus();
                 this.Drink = soda;               
                 order.Add(this.Drink);
@@ -90,6 +98,7 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
+                combo.Drink = new Tyrannotea();
                 this.Drink = new Tyrannotea();
                 order.Add(this.Drink);
 
@@ -104,6 +113,7 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
+                combo.Drink = new Water();
                 this.Drink = new Water();
                 order.Add(this.Drink);
             }
@@ -116,6 +126,7 @@ namespace PointOfSale
         {
             if (this.Drink != null)
             {
+                combo.Drink.Size = size;
                 this.Drink.Size = size;
             }
             //NavigationService?.Navigate(new MenuCategorySelection());
@@ -151,11 +162,11 @@ namespace PointOfSale
         {
             if (this.Drink is JurassicJava)
             {
-      
+                BtnSpecial.Content = "Decaf";
             }
             if(this.Drink == new Tyrannotea())
             {
-
+                BtnSpecial.Content = "Sweet";
             }
             if(this.Drink is Sodasaurus)
             {

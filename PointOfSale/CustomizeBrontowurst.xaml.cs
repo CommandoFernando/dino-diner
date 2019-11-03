@@ -17,30 +17,33 @@ using DinoDiner.Menu;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomizePBJ.xaml
+    /// Interaction logic for CustomizeBrontowurst.xaml
     /// </summary>
-    public partial class CustomizePBJ : Page
+    public partial class CustomizeBrontowurst : Page
     {
-        private PrehistoricPBJ pbj;
-        public CustomizePBJ(PrehistoricPBJ pbj)
+        private Brontowurst dog;
+        public CustomizeBrontowurst(Brontowurst dog)
         {
             InitializeComponent();
-            this.pbj = pbj;
+            this.dog = dog;
         }
-        private void OnHoldPeanutButter(object sender, RoutedEventArgs args)
+        private void OnHoldBun(object sender, RoutedEventArgs args)
         {
-            pbj.HoldPeanutButter();
+            dog.HoldBun();
         }
-        private void OnHoldJelly(object sender, RoutedEventArgs args)
+        private void OnHoldPeppers(object sender, RoutedEventArgs args)
         {
-            pbj.HoldJelly();
+            dog.HoldPeppers();
+        }
+        private void OnHoldOnion(object sender, RoutedEventArgs args)
+        {
+            dog.HoldOnion();
         }
         private void OnDone(object sender, RoutedEventArgs args)
         {
             if (NavigationService.CanGoBack)
             {
-                //NavigationService.GoBack();
-                NavigationService.Navigate(new CustomizeCombo(new CretaceousCombo(pbj)));
+                NavigationService.Navigate(new CustomizeCombo(new CretaceousCombo(dog)));
             }
             else
             {

@@ -13,10 +13,22 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Tyrannotea : Drink, IMenuItem, INotifyPropertyChanged
     {
+        private bool sweet = false;
         /// <summary>
         /// Bool tells whether sweet
         /// </summary>
-        public bool Sweet { get; set; } = false;
+        public bool Sweet
+        {
+            get
+            {
+                return sweet;
+            }
+            set
+            {
+                sweet = value;
+                NotifyOfPropertyChange("Description");
+            }
+        }
         /// <summary>
         /// bool tells whether lemon
         /// </summary>
@@ -73,6 +85,7 @@ namespace DinoDiner.Menu
                 NotifyOfPropertyChange("Calories");
                 NotifyOfPropertyChange("Description");
                 NotifyOfPropertyChange("Ingredients");
+                NotifyOfPropertyChange("Price");
             }
             get
             {
@@ -114,6 +127,17 @@ namespace DinoDiner.Menu
             this.Lemon = true;
             NotifyOfPropertyChange("Special");
             NotifyOfPropertyChange("Ingredients");
+        }
+        /// <summary>
+        /// M
+        /// </summary>
+        public void MakeSweet()
+        {
+            this.Sweet = true;
+            this.Lemon = true;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
+            NotifyOfPropertyChange("Description");
         }
         /// <summary>
         /// ToString override method
