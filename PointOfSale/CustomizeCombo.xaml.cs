@@ -87,15 +87,15 @@ namespace PointOfSale
                 NavigationService.Navigate(new CustomizeVelociWrap(combo.Entree as VelociWrap));
             }
         }
-        private void OnSelectSmall()
+        public void OnSelectSmall(object sender, RoutedEventArgs args)
         {
             combo.Size = DinoDiner.Menu.Size.Small;
         }
-        private void OnSelectMedium()
+        public void OnSelectMedium(object sender, RoutedEventArgs args)
         {
             combo.Size = DinoDiner.Menu.Size.Medium;
         }
-        private void OnSelectLarge()
+        public void OnSelectLarge(object sender, RoutedEventArgs args)
         {
             combo.Size = DinoDiner.Menu.Size.Large;
         }
