@@ -80,11 +80,14 @@ namespace DinoDiner.Menu
             set
             {
                 this.side = value;
-                NotifyOfPropertyChange("Special");
-                NotifyOfPropertyChange("Ingredients");
-                NotifyOfPropertyChange("Description");
-                NotifyOfPropertyChange("Size");
-                NotifyOfPropertyChange("Price");
+                Side.PropertyChanged += (object sender, PropertyChangedEventArgs args) =>
+                {
+                    NotifyOfPropertyChange("Special");
+                    NotifyOfPropertyChange("Ingredients");
+                    NotifyOfPropertyChange("Description");
+                    NotifyOfPropertyChange("Size");
+                    NotifyOfPropertyChange("Price");
+                };
             }
         }
 

@@ -40,7 +40,8 @@ namespace MenuTest
         public void OrderTotalCostShouldNotBeNegative()
         {
             Order order = new Order();
-
+            MockMenuItem mmi = new MockMenuItem(-5); //price is neg.
+            Assert.Equal(0, order.TotalCost); // Price will default to zero if neg.
         }
     }
 }
