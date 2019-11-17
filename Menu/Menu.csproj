@@ -10,7 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\netstandard2.0\Menu.deps.json" />
+    <Content Include="bin\Debug\netstandard2.0\Menu.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Release\netstandard2.0\" />
     <Folder Include="Milestones\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netstandard2.0\Menu.dll" />
+    <None Include="bin\Debug\netstandard2.0\Menu.pdb" />
   </ItemGroup>
 
 </Project>
