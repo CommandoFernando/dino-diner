@@ -136,7 +136,11 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Combo constructor with no parameters
         /// </summary>
-        public CretaceousCombo() { }
+        public CretaceousCombo() {
+            this.Entree = new Brontowurst();
+            this.Side = new Fryceritops();
+            this.Drink = new Sodasaurus();
+        }
         /// <summary>
         /// Combo constructor Sets Entree to entree and initializes Side and Drink to default Value
         /// </summary>

@@ -97,7 +97,21 @@ namespace DinoDiner.Menu
         /// <summary>
         /// getter for available combos
         /// </summary>
-        public List<CretaceousCombo> AvailableCombos { get; }
+        public List<IMenuItem> AvailableCombos { 
+            get
+            {
+                List<IMenuItem> combos = new List<IMenuItem>();
+                combos.Add(new CretaceousCombo(new Brontowurst()));
+                combos.Add(new CretaceousCombo(new DinoNuggets()));
+                combos.Add(new CretaceousCombo(new PrehistoricPBJ()));
+                combos.Add(new CretaceousCombo(new PterodactylWings()));
+                combos.Add(new CretaceousCombo(new SteakosaurusBurger()));
+                combos.Add(new CretaceousCombo(new TRexKingBurger()));
+                combos.Add(new CretaceousCombo(new VelociWrap()));
+
+                return combos;
+            }
+                }
         /// <summary>
         /// ToString override method
         /// </summary>
