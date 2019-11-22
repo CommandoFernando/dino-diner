@@ -15,6 +15,10 @@ namespace Website.Pages
         {
 
         }
+        public void OnPost()
+        {
+
+        }
         public Menu menu = new Menu();
         /// <summary>
         /// Getter for menu

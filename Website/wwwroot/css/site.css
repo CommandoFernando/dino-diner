@@ -12,3 +12,16 @@ body {
     padding-right: 15px;
 }
 
+#Sidebar {
+    display: flex;
+    flex-direction: row;
+}
+
+#CategoryBoxes{
+    display: flex;
+    flex-direction: column;
+}
+#Exclusions {
+    display: flex;
+    flex-direction: column;
+}

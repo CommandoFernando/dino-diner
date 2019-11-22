@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
 using System.ComponentModel;
+using System.Linq;
 
 namespace DinoDiner.Menu
 {
@@ -97,7 +98,8 @@ namespace DinoDiner.Menu
         /// <summary>
         /// getter for available combos
         /// </summary>
-        public List<IMenuItem> AvailableCombos { 
+        public List<IMenuItem> AvailableCombos
+        {
             get
             {
                 List<IMenuItem> combos = new List<IMenuItem>();
@@ -111,7 +113,23 @@ namespace DinoDiner.Menu
 
                 return combos;
             }
+        }
+        public List<string> PossibleIngredients
+        {
+            get
+            {
+                HashSet<string> ingredients = new HashSet<string>();
+                Menu menu = new Menu();
+                foreach (IMenuItem item in menu.AvailableMenuItems)
+                {
+                    foreach (string s in item.Ingredients)
+                    {
+                        ingredients.Add(s);
+                    }
                 }
+                return ingredients.ToList();
+            }
+        }
         /// <summary>
         /// ToString override method
         /// </summary>

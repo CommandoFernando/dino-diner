@@ -4,81 +4,137 @@
     ViewData["Title"] = "Menu";
 }
 @{DinoDiner.Menu.Menu menu = new DinoDiner.Menu.Menu();}
-<h1>Menu</h1>
-<h2>Combos</h2>
-@foreach (DinoDiner.Menu.CretaceousCombo combo in menu.AvailableCombos)
-{
-    <div class="menu-item">
-        <div>
-            Description: @combo.Description
-        </div>
-        <div>
-            Price: @combo.Price
-        </div>
-        <div>
-            Calories: @combo.Calories
-        </div>
-        <div>
-            Ingredients:
-            @combo.Entree,
-            @combo.Side,
-            @combo.Drink
-        </div>
-    </div>
-}
-
-<h2>Entrees</h2>
-@foreach (DinoDiner.Menu.Entree entree in menu.AvailableEntrees)
-{
-    <div class="menu-item">
-        <div>"Description: " @entree.Description</div>
-        <div>"Price: "@entree.Price</div>
-        <div>"Calories: "@entree.Calories</div>
-        @foreach (string s in entree.Ingredients)
+<div id="Sidebar">
+    <div>
+        <h1>Menu</h1>
+        <h2>Combos</h2>
+        @foreach (DinoDiner.Menu.CretaceousCombo combo in menu.AvailableCombos)
         {
-            <div>
-                "Ingredients: " @s
-            </div>
-        }
-    </div>
-}
-<h2>Sides</h2>
-@foreach (DinoDiner.Menu.Side side in menu.AvailableSides)
-{
-    <div class="menu-item">
-        <div>
-            "Description: " @side.Description
-        </div>
-        <div>
-            "Price: "@side.Price
-        </div>
-        <div>
-            "Calories: "@side.Calories
-        </div>
-        @foreach (string s in side.Ingredients)
-        {
-            <div>
-                "Ingredients: "@s
-            </div>
-        }
-    </div>
-
-}
-<h2>Drinks</h2>
-@foreach (DinoDiner.Menu.Drink drink in menu.AvailableDrinks)
-{
-    <div class="menu-item">
-        <div>"Description: "@drink.Description;</div>
-        <div>"Price: "@drink.Price;</div>
-        <div>"Calories"@drink.Calories;</div>
-        <div>
-            @foreach (string s in drink.Ingredients)
-            {
+            <div class="menu-item">
                 <div>
-                    "Ingredients: "@s
+                    Description: @combo.Description
                 </div>
-            }
+                <div>
+                    Price: @combo.Price
+                </div>
+                <div>
+                    Calories: @combo.Calories
+                </div>
+                <div>
+                    Ingredients:
+                    @combo.Entree,
+                    @combo.Side,
+                    @combo.Drink
+                </div>
+            </div>
+        }
+
+        <h2>Entrees</h2>
+        @foreach (DinoDiner.Menu.Entree entree in menu.AvailableEntrees)
+        {
+            <div class="menu-item">
+                <div>"Description: " @entree.Description</div>
+                <div>"Price: "@entree.Price</div>
+                <div>"Calories: "@entree.Calories</div>
+                @foreach (string s in entree.Ingredients)
+                {
+                    <div>
+                        "Ingredients: " @s
+                    </div>
+                }
+            </div>
+        }
+        <h2>Sides</h2>
+        @foreach (DinoDiner.Menu.Side side in menu.AvailableSides)
+        {
+            <div class="menu-item">
+                <div>
+                    "Description: " @side.Description
+                </div>
+                <div>
+                    "Price: "@side.Price
+                </div>
+                <div>
+                    "Calories: "@side.Calories
+                </div>
+                @foreach (string s in side.Ingredients)
+                {
+                    <div>
+                        "Ingredients: "@s
+                    </div>
+                }
+            </div>
+
+        }
+        <h2>Drinks</h2>
+        @foreach (DinoDiner.Menu.Drink drink in menu.AvailableDrinks)
+        {
+            <div class="menu-item">
+                <div>"Description: "@drink.Description;</div>
+                <div>"Price: "@drink.Price;</div>
+                <div>"Calories"@drink.Calories;</div>
+                <div>
+                    @foreach (string s in drink.Ingredients)
+                    {
+                        <div>
+                            "Ingredients: "@s
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+    <div>
+        <div>
+            <form method="post">
+                <input type="text" name="search" id="search" />
+                <input type="submit" value="Search" />
+                <input type="submit" name="filter" id="filter" value="Apply Filter(s)" />
+                <div id="CategoryBoxes">
+                    <h2>Menu Category</h2>
+                    <label>
+                        <input type="checkbox" value="Combo" class="menu-category" name="menuCategory" />
+                        Combo
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Entree" class="menu-category" name="menuCategory" />
+                        Entree
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Side" class="menu-category" name="menuCategory" />
+                        Side
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Drink" class="menu-category" name="menuCategory" />
+                        Drink
+                    </label>
+                </div>
+                <div>
+                    <h4>Price</h4>
+                    <label>
+                        Min:
+                        <input type="number" id="minimum-price" min="0" max="10" step="0.1" name="minimumPrice" />
+                    </label>
+                    <label>
+                        Max:
+                        <input type="number" id="maximum-price" min="0" max="10" step="0.1" name="maximumPrice" />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Excluding Ingredients
+                    </label>
+                    <div id="Exclusions">
+                        @foreach (string s in menu.PossibleIngredients)
+                        {
+                            <label>
+                                <input type="checkbox" value=@s class="exclude-ingredient" name="@s" />
+                                @s
+                            </label>
+                        }
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-}
-
+</div>
