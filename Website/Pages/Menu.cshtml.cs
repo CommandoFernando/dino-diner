@@ -23,6 +23,10 @@ namespace Website.Pages
         public void OnPost()
         {
             menu = Menu.AvailableMenuItems;
+            if(search != null)
+            {
+
+            }
         }
         /// <summary>
         /// Getter for menu

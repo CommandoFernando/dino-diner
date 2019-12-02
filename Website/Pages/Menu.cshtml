@@ -7,73 +7,83 @@
 <div id="Sidebar">
     <div>
         <h1>Menu</h1>
-        <h2>Combos</h2>
-        @foreach (DinoDiner.Menu.CretaceousCombo combo in menu.AvailableCombos)
+        @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Combo"))
         {
-            <div>
-                <div class="menu-item">
-                    <h3>
-                        @combo.Description
-                    </h3>
-                    <h4>
-                        Price: $@combo.Price<br />
-                        Calories: @combo.Calories<br />
-                        Ingredients:
-                        <div>
-                            @combo.Entree,
-                            @combo.Side,
-                            @combo.Drink
-                        </div>
-                    </h4>
-                </div>
-            </div>
-        }
-
-        <h2>Entrees</h2>
-        @foreach (DinoDiner.Menu.Entree entree in menu.AvailableEntrees)
-        {
-            <div>
-                <div class="menu-item">
-                    <h3>@entree.Description</h3>
-                    <h4>
-                        Price: $@entree.Price <br />
-                        Calories: @entree.Calories<br />
-                        Ingredients:
-                        @foreach (string s in entree.Ingredients)
-                        {
+            <h2>Combos</h2>
+            @foreach (DinoDiner.Menu.CretaceousCombo combo in menu.AvailableCombos)
+            {
+                <div>
+                    <div class="menu-item">
+                        <h3>
+                            @combo.Description
+                        </h3>
+                        <h4>
+                            Price: $@combo.Price<br />
+                            Calories: @combo.Calories<br />
+                            Ingredients:
                             <div>
-                                @s
+                                @combo.Entree,
+                                @combo.Side,
+                                @combo.Drink
                             </div>
-                        }
-                        <br />
-                    </h4>
+                        </h4>
+                    </div>
                 </div>
-            </div>
+            }
         }
-        <h2>Sides</h2>
-        @foreach (DinoDiner.Menu.Side side in menu.AvailableSides)
+        @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Entree"))
         {
-            <div>
-                <div class="menu-item">
-                    <h3>
-                        @side.Description
-                    </h3>
-                    <h4>
-                        Price: $@side.Price<br />
-                        Calories: @side.Calories<br />
-                        Ingredients:
-                        @foreach (string s in side.Ingredients)
-                        {
-                            <div>
-                                @s
-                            </div>
-                        }
-                        <br />
-                    </h4>
+            <h2>Entrees</h2>
+            @foreach (DinoDiner.Menu.Entree entree in menu.AvailableEntrees)
+            {
+                <div>
+                    <div class="menu-item">
+                        <h3>@entree.Description</h3>
+                        <h4>
+                            Price: $@entree.Price <br />
+                            Calories: @entree.Calories<br />
+                            Ingredients:
+                            @foreach (string s in entree.Ingredients)
+                            {
+                                <div>
+                                    @s
+                                </div>
+                            }
+                            <br />
+                        </h4>
+                    </div>
                 </div>
-            </div>
+            }
         }
-        <h2>Drinks</h2>
+        @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Entree"))
+        {
+            <h2>Sides</h2>
+            @foreach (DinoDiner.Menu.Side side in menu.AvailableSides)
+            {
+                <div>
+                    <div class="menu-item">
+                        <h3>
+                            @side.Description
+                        </h3>
+                        <h4>
+                            Price: $@side.Price<br />
+                            Calories: @side.Calories<br />
+                            Ingredients:
+                            @foreach (string s in side.Ingredients)
+                            {
+                                <div>
+                                    @s
+                                </div>
+                            }
+                            <br />
+                        </h4>
+                    </div>
+                </div>
+            }
+        }
+        @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Entree"))
+        {
+            <h2>Drinks</h2>
         @foreach (DinoDiner.Menu.Drink drink in menu.AvailableDrinks)
         {
             <div>
@@ -93,6 +103,7 @@
                     </h4>
                 </div>
             </div>
+        }
         }
     </div>
 

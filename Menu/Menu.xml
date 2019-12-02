@@ -930,6 +930,11 @@
             getter for available combos
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Menu.PossibleIngredients">
+            <summary>
+            A getter for all the possible ingredients
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Menu.ToString">
             <summary>
             ToString override method

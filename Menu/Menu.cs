@@ -65,6 +65,11 @@ namespace DinoDiner.Menu
                 return availableEntrees;
             }
         }
+        public List<IMenuItem> FilterCategories()
+        {
+            List<IMenuItem> categories = new List<IMenuItem>();
+            
+        }
         /// <summary>
         /// getter for available sides list
         /// </summary>
@@ -114,6 +119,9 @@ namespace DinoDiner.Menu
                 return combos;
             }
         }
+        /// <summary>
+        /// A getter for all the possible ingredients
+        /// </summary>
         public List<string> PossibleIngredients
         {
             get
@@ -145,5 +153,6 @@ namespace DinoDiner.Menu
             }
             return menu2.ToString();
         }
+
     }
 }
