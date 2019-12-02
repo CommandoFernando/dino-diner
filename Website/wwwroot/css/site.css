@@ -17,10 +17,11 @@ body {
     flex-direction: row;
 }
 
-#CategoryBoxes{
+#CategoryBoxes {
     display: flex;
     flex-direction: column;
 }
+
 #Exclusions {
     display: flex;
     flex-direction: column;

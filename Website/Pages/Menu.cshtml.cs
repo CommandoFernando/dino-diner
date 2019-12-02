@@ -11,15 +11,19 @@ namespace Website.Pages
 {
     public class MenuModel : PageModel
     {
+        public List<IMenuItem> menu;
+        [BindProperty]
+        public string search { get; set; }
+        [BindProperty]
+        public List<string> menuCategory { get; set; } = new List<string>();
         public void OnGet()
         {
-
+            menu = Menu.AvailableMenuItems;
         }
         public void OnPost()
         {
-
+            menu = Menu.AvailableMenuItems;
         }
-        public Menu menu = new Menu();
         /// <summary>
         /// Getter for menu
         /// </summary>
