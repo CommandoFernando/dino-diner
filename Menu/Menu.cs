@@ -14,7 +14,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Menu class for listing menu items
     /// </summary>
-    public class Menu
+    public class menu
     {
         /// <summary>
         /// Getter for all available menu items list
@@ -28,21 +28,6 @@ namespace DinoDiner.Menu
                 menuItems.AddRange(AvailableEntrees);
                 menuItems.AddRange(AvailableSides);
                 menuItems.AddRange(AvailableDrinks);
-                /*menuItems.Add(new Brontowurst());
-                menuItems.Add(new DinoNuggets());
-                menuItems.Add(new PrehistoricPBJ());
-                menuItems.Add(new PterodactylWings());
-                menuItems.Add(new SteakosaurusBurger());
-                menuItems.Add(new TRexKingBurger());
-                menuItems.Add(new VelociWrap());
-                menuItems.Add(new Fryceritops());
-                menuItems.Add(new MeteorMacAndCheese());
-                menuItems.Add(new MezzorellaSticks());
-                menuItems.Add(new Triceritots());
-                menuItems.Add(new Sodasaurus());
-                menuItems.Add(new Tyrannotea());
-                menuItems.Add(new JurassicJava());
-                menuItems.Add(new Water());*/
                 return menuItems;
             }
 
@@ -64,11 +49,6 @@ namespace DinoDiner.Menu
                 availableEntrees.Add(new VelociWrap());
                 return availableEntrees;
             }
-        }
-        public List<IMenuItem> FilterCategories()
-        {
-            List<IMenuItem> categories = new List<IMenuItem>();
-            
         }
         /// <summary>
         /// getter for available sides list
@@ -127,7 +107,7 @@ namespace DinoDiner.Menu
             get
             {
                 HashSet<string> ingredients = new HashSet<string>();
-                Menu menu = new Menu();
+                menu menu = new menu();
                 foreach (IMenuItem item in menu.AvailableMenuItems)
                 {
                     foreach (string s in item.Ingredients)

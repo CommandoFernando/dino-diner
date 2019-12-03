@@ -11,36 +11,26 @@ namespace Website.Pages
 {
     public class MenuModel : PageModel
     {
-        public List<IMenuItem> menu;
+        public DinoDiner.Menu.menu menu = new DinoDiner.Menu.menu();
         [BindProperty]
-        public string search { get; set; }
+        public string search { get; set; } = "";
         [BindProperty]
         public List<string> menuCategory { get; set; } = new List<string>();
+        [BindProperty]
+        public List<string> ingredientFilters { get; set; } = new List<string>();
+        [BindProperty]
+        public double minimumPrice { get; set; }
+        [BindProperty]
+        public double maximumPrice { get; set; } = 10;
         public void OnGet()
         {
-            menu = Menu.AvailableMenuItems;
         }
         public void OnPost()
         {
-            menu = Menu.AvailableMenuItems;
             if(search != null)
             {
 
             }
-        }
-        /// <summary>
-        /// Getter for menu
-        /// </summary>
-        public Menu Menu
-        {
-            get
-            {
-                return new Menu();
-            }
-        }
-        public List<Drink> ListDrinks()
-        {
-            return Menu.AvailableDrinks;
         }
     }
 }

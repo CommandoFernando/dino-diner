@@ -3,108 +3,131 @@
 @{
     ViewData["Title"] = "Menu";
 }
-@{DinoDiner.Menu.Menu menu = new DinoDiner.Menu.Menu();}
+@*@{DinoDiner.Menu.menu menu = new DinoDiner.Menu.menu();}*@
 <div id="Sidebar">
+    @if (@Model.search == null)
+    {
+        @(Model.search = "");
+    }
     <div>
         <h1>Menu</h1>
         @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Combo"))
         {
             <h2>Combos</h2>
-            @foreach (DinoDiner.Menu.CretaceousCombo combo in menu.AvailableCombos)
+            @foreach (DinoDiner.Menu.CretaceousCombo combo in @Model.menu.AvailableCombos)
             {
-                <div>
-                    <div class="menu-item">
-                        <h3>
-                            @combo.Description
-                        </h3>
-                        <h4>
-                            Price: $@combo.Price<br />
-                            Calories: @combo.Calories<br />
-                            Ingredients:
-                            <div>
-                                @combo.Entree,
-                                @combo.Side,
-                                @combo.Drink
-                            </div>
-                        </h4>
+                if (combo.Price >= @Model.minimumPrice && combo.Price <= @Model.maximumPrice && combo.Description.Contains(@Model.search, StringComparison.OrdinalIgnoreCase))
+                {
+                    <div>
+                        <div class="menu-item">
+                            <h3>
+                                @combo.Description
+                            </h3>
+                            <h4>
+                                Price: $@combo.Price<br />
+                                Calories: @combo.Calories<br />
+                                Ingredients:
+                                <div>
+                                    @combo.Entree,
+                                    @combo.Side,
+                                    @combo.Drink
+                                </div>
+                            </h4>
+                        </div>
                     </div>
-                </div>
+                }
             }
         }
         @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Entree"))
         {
             <h2>Entrees</h2>
-            @foreach (DinoDiner.Menu.Entree entree in menu.AvailableEntrees)
+            @foreach (DinoDiner.Menu.Entree entree in @Model.menu.AvailableEntrees)
             {
-                <div>
-                    <div class="menu-item">
-                        <h3>@entree.Description</h3>
-                        <h4>
-                            Price: $@entree.Price <br />
-                            Calories: @entree.Calories<br />
-                            Ingredients:
-                            @foreach (string s in entree.Ingredients)
-                            {
-                                <div>
-                                    @s
-                                </div>
-                            }
-                            <br />
-                        </h4>
+                if (entree.Price >= @Model.minimumPrice && entree.Price <= @Model.maximumPrice && entree.Description.Contains(@Model.search, StringComparison.OrdinalIgnoreCase))
+                {
+                    <div>
+                        <div class="menu-item">
+                            <h3>@entree.Description</h3>
+                            <h4>
+                                Price: $@entree.Price <br />
+                                Calories: @entree.Calories<br />
+                                Ingredients:
+                                @foreach (string s in entree.Ingredients)
+                                {
+                                    <div>
+                                        @s
+                                    </div>
+                                    <br />
+                                }
+                            </h4>
+                        </div>
                     </div>
-                </div>
+                }
             }
         }
-        @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Entree"))
+
+        @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Side"))
         {
+
             <h2>Sides</h2>
-            @foreach (DinoDiner.Menu.Side side in menu.AvailableSides)
+            @foreach (DinoDiner.Menu.Side side in @Model.menu.AvailableSides)
             {
-                <div>
-                    <div class="menu-item">
-                        <h3>
-                            @side.Description
-                        </h3>
-                        <h4>
-                            Price: $@side.Price<br />
-                            Calories: @side.Calories<br />
-                            Ingredients:
-                            @foreach (string s in side.Ingredients)
-                            {
-                                <div>
-                                    @s
-                                </div>
-                            }
-                            <br />
-                        </h4>
+                if (side.Price >= @Model.minimumPrice && side.Price <= @Model.maximumPrice && side.Description.Contains(@Model.search, StringComparison.OrdinalIgnoreCase))
+                {
+                    <div>
+                        <div class="menu-item">
+                            <h3>
+                                @side.Description
+                            </h3>
+                            <h4>
+                                Price: $@side.Price<br />
+                                Calories: @side.Calories<br />
+                                Ingredients:
+                                @foreach (string s in side.Ingredients)
+                                {
+                                    if (!@Model.ingredientFilters.Contains(s))
+                                    {
+                                        <div>
+                                            @s
+                                        </div>
+                                    }
+                                }
+                                <br />
+                            </h4>
+                        </div>
                     </div>
-                </div>
+                }
             }
         }
-        @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Entree"))
+
+        @if (Model.menuCategory.Count == 0 || Model.menuCategory.Contains("Drink"))
         {
             <h2>Drinks</h2>
-        @foreach (DinoDiner.Menu.Drink drink in menu.AvailableDrinks)
-        {
-            <div>
-                <div class="menu-item">
-                    <h3>@drink.Description</h3>
-                    <h4>
-                        Price: $@drink.Price<br />
-                        Calories: @drink.Calories<br />
-                        Ingredients:
-                        @foreach (string s in drink.Ingredients)
-                        {
-                            <div>
-                                @s
-                            </div>
-                        }
-                        <br />
-                    </h4>
-                </div>
-            </div>
+            @foreach (DinoDiner.Menu.Drink drink in @Model.menu.AvailableDrinks)
+            {
+                if (drink.Price >= @Model.minimumPrice && drink.Price <= @Model.maximumPrice && drink.Description.Contains(@Model.search, StringComparison.OrdinalIgnoreCase))
+                {
+                    <div>
+                        <div class="menu-item">
+                            <h3>@drink.Description</h3>
+                            <h4>
+                                Price: $@drink.Price<br />
+                                Calories: @drink.Calories<br />
+                                Ingredients:
+                                @foreach (string s in drink.Ingredients)
+                                {
+                                    <div>
+                                        @s
+                                    </div>
+                                }
+                                <br />
+                            </h4>
+                        </div>
+                    </div>
+                }
+            }
         }
-        }
+
     </div>
 
     <div>
@@ -116,19 +139,19 @@
                 <h2>Menu Category</h2>
                 <div id="CategoryBoxes">
                     <label>
-                        <input type="checkbox" value="Combo" class="menu-category" name="menuCategory" checked="@Model.menuCategory.Contains("Combo")"/>
+                        <input type="checkbox" value="Combo" class="menu-category" name="menuCategory" checked="@Model.menuCategory.Contains("Combo")" />
                         Combo
                     </label>
                     <label>
-                        <input type="checkbox" value="Entree" class="menu-category" name="menuCategory" checked="@Model.menuCategory.Contains("Entree")"/>
+                        <input type="checkbox" value="Entree" class="menu-category" name="menuCategory" checked="@Model.menuCategory.Contains("Entree")" />
                         Entree
                     </label>
                     <label>
-                        <input type="checkbox" value="Side" class="menu-category" name="menuCategory" checked="@Model.menuCategory.Contains("Side")"/>
+                        <input type="checkbox" value="Side" class="menu-category" name="menuCategory" checked="@Model.menuCategory.Contains("Side")" />
                         Side
                     </label>
                     <label>
-                        <input type="checkbox" value="Drink" class="menu-category" name="menuCategory" checked="@Model.menuCategory.Contains("Drink")"/>
+                        <input type="checkbox" value="Drink" class="menu-category" name="menuCategory" checked="@Model.menuCategory.Contains("Drink")" />
                         Drink
                     </label>
                 </div>
@@ -136,11 +159,11 @@
                     <h4>Price</h4>
                     <label>
                         Min:
-                        <input type="number" id="minimum-price" min="0" max="10" step="0.1" name="minimumPrice" />
+                        <input type="number" id="minimum-price" min="0" max="10" step="0.01" name="minimumPrice" value="@Model.minimumPrice" />
                     </label>
                     <label>
                         Max:
-                        <input type="number" id="maximum-price" min="0" max="10" step="0.1" name="maximumPrice" />
+                        <input type="number" id="maximum-price" min="0" max="10" step="0.01" name="maximumPrice" value="@Model.maximumPrice" />
                     </label>
                 </div>
                 <br />
@@ -149,10 +172,10 @@
                         Excluding Ingredients
                     </label>
                     <div id="Exclusions">
-                        @foreach (string s in menu.PossibleIngredients)
+                        @foreach (string s in @Model.menu.PossibleIngredients)
                         {
                             <label>
-                                <input type="checkbox" value=@s class="exclude-ingredient" name="@s" />
+                                <input type="checkbox" value="@s" class="exclude-ingredient" name=@s checked="@Model.ingredientFilters.Contains(@s)" />
                                 @s
                             </label>
                         }

@@ -900,42 +900,42 @@
             Special instructions
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Menu">
+        <member name="T:DinoDiner.Menu.menu">
             <summary>
             Menu class for listing menu items
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Menu.AvailableMenuItems">
+        <member name="P:DinoDiner.Menu.menu.AvailableMenuItems">
             <summary>
             Getter for all available menu items list
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Menu.AvailableEntrees">
+        <member name="P:DinoDiner.Menu.menu.AvailableEntrees">
             <summary>
             getter for available entrees list
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Menu.AvailableSides">
+        <member name="P:DinoDiner.Menu.menu.AvailableSides">
             <summary>
             getter for available sides list
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Menu.AvailableDrinks">
+        <member name="P:DinoDiner.Menu.menu.AvailableDrinks">
             <summary>
             getter for available drinks list
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Menu.AvailableCombos">
+        <member name="P:DinoDiner.Menu.menu.AvailableCombos">
             <summary>
             getter for available combos
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Menu.PossibleIngredients">
+        <member name="P:DinoDiner.Menu.menu.PossibleIngredients">
             <summary>
             A getter for all the possible ingredients
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Menu.ToString">
+        <member name="M:DinoDiner.Menu.menu.ToString">
             <summary>
             ToString override method
             </summary>
